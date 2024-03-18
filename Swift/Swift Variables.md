@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Swift Variables
 date: 24-03-14
+layout: post
 tags:
   - swift
   - types
