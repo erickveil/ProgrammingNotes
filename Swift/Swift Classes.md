@@ -50,3 +50,58 @@ print(person.age)  // Output: 30
 print(person.introduce()) // Output: Hello, my name is John Doe and I am 30 years old.
 ```
 
+# Subclassing
+
+Here's an example to illustrate how to create a subclass. Let's say we have a `Person` class, as defined previously:
+
+```Swift
+class Person {
+    var name: String
+    var age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+
+    func introduce() -> String {
+        return "Hello, my name is \(name) and I am \(age) years old."
+    }
+}
+```
+
+Now, suppose we want to create an `Employee` class that inherits from `Person` but also includes an additional property for the employee's job title:
+
+```Swift
+class Employee: Person {
+    var jobTitle: String
+
+    init(name: String, age: Int, jobTitle: String) {
+        self.jobTitle = jobTitle
+        // Call the superclass's initializer
+        super.init(name: name, age: age)
+    }
+
+    // Example of method overriding
+    override func introduce() -> String {
+        return super.introduce() + " I work as a \(jobTitle)."
+    }
+}
+```
+
+In this `Employee` class:
+
+- It inherits from `Person` by specifying `: Person` after its name.
+- It adds a new property, `jobTitle`.
+- It overrides the `init` method to include the initialization of `jobTitle`. Inside the `init`, it calls `super.init(name: age:)` to ensure the properties inherited from `Person` are properly initialized.
+- It overrides the `introduce` method to extend the behavior of the method inherited from `Person`. The `override` keyword is required to override a method. `super.introduce()` is called to include the original introduction message, and then it adds information about the job title.
+
+To instantiate an `Employee` and use its properties and methods:
+
+```Swift
+let employee = Employee(name: "Jane Doe", age: 28, jobTitle: "Software Engineer")
+print(employee.introduce())
+// Output: Hello, my name is Jane Doe and I am 28 years old. I work as a Software Engineer.
+```
+
+
