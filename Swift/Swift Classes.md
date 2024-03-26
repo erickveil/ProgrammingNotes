@@ -182,3 +182,41 @@ class MyClass: SomeProtocol {
 }
 ```
 
+# Does Swift Pass by Ref or Copy?
+
+Swift does not have a "copy constructor" concept in the same way that languages like C++ do.
+### Value Types (Structs and Enums)
+Swift's value types (like structs and enums) are copied automatically when you assign them to a new variable or pass them to a function. This behavior is due to Swift's copy-on-write mechanism, which ensures that a unique instance of the variable is created only if and when the variable is modified. This makes copying of value types efficient and straightforward, without the need for a copy constructor:
+
+```swift
+struct ExampleStruct {
+    var number: Int
+}
+
+var original = ExampleStruct(number: 1)
+var copy = original // `copy` is now a separate instance
+copy.number = 2 // Only `copy` is modified, not `original`
+```
+
+### Reference Types (Classes)
+For classes, which are reference types, Swift does not automatically copy an instance when you assign it to a new variable or pass it around. Instead, both variables would refer to the same instance. If you need to create a copy of a class instance, you have to implement that functionality yourself, typically by defining a method or initializer that creates a new instance of the class with the same properties as the instance you're copying:
+
+```swift
+class ExampleClass {
+    var number: Int
+    init(number: Int) {
+        self.number = number
+    }
+    
+    // Custom method to "copy" the instance
+    func copy() -> ExampleClass {
+        return ExampleClass(number: self.number)
+    }
+}
+
+let original = ExampleClass(number: 1)
+let copy = original.copy() // `copy` is a new instance with the same `number` value
+copy.number = 2 // Only `copy` is modified, not `original`
+```
+
+This method acts similarly to a copy constructor but is manually defined. Swift's emphasis on value types for data that needs to be copied and the explicit handling required for copying reference types helps clarify ownership and mutation in your code.
