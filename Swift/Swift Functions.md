@@ -197,6 +197,58 @@ In this example, `performOperation` is a higher-order function because it takes 
 
 This capability allows for highly flexible and reusable code designs, such as callbacks, function chaining, and more sophisticated patterns like map-reduce operations on collections.
 
+# Functions as Class Members
+
+Here's how you can store and use a function as a class member:
+
+### Step 1: Defining the Class and Function Property
+
+First, you define a class with a property to store the function. The type of the property will be a function type, specifying the parameters and return type of the function that can be stored.
+
+```swift
+class Calculator {
+    var operation: (Int, Int) -> Int
+
+    init(operation: @escaping (Int, Int) -> Int) {
+        self.operation = operation
+    }
+
+    func performOperation(a: Int, b: Int) -> Int {
+        return operation(a, b)
+    }
+}
+```
+
+In this example, the `Calculator` class has an `operation` property that can store any function matching the type `(Int, Int) -> Int`, which is a function that takes two `Int` parameters and returns an `Int`. The `@escaping` annotation is used because the function is stored for later use, beyond the scope of the function that receives it.
+
+The `@escaping` attribute is used to indicate that a closure (or a function, since functions are a special case of closures in Swift) is allowed to "escape" from the scope in which it is defined. This means the closure can be stored and executed after the function in which it is passed as an argument returns. Without the `@escaping` attribute, closures are considered non-escaping by default, meaning they must be executed within the function's body before it returns.
+
+### Step 2: Storing and Using the Function
+
+Next, you create instances of the `Calculator` class, providing different functions to be stored as the `operation` property. You can then use the `performOperation` method to invoke the stored function.
+
+```swift
+// Define two simple arithmetic functions
+func add(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+func multiply(a: Int, b: Int) -> Int {
+    return a * b
+}
+
+// Create Calculator instances with different operations
+let additionCalculator = Calculator(operation: add)
+let multiplicationCalculator = Calculator(operation: multiply)
+
+// Perform operations
+let sum = additionCalculator.performOperation(a: 3, b: 4)
+print("Sum: \(sum)")  // Output: Sum: 7
+
+let product = multiplicationCalculator.performOperation(a: 3, b: 4)
+print("Product: \(product)")  // Output: Product: 12
+```
+
 # Overloading
 
 ### By Number of Parameters
