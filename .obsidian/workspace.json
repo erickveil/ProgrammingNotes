@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Swift/Swift Closures.md",
+                "file": "Swift/Swift Guard Condition.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Swift/Swift Closures.md",
+                "file": "Swift/Swift Guard Condition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Swift/Swift Closures.md",
+                "file": "Swift/Swift Guard Condition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Swift/Swift Closures.md"
+                "file": "Swift/Swift Guard Condition.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   "active": "82a8424d9fcf451f",
   "lastOpenFiles": [
     "Swift/Swift Classes.md",
+    "Swift/Swift Guard Condition.md",
     "Swift/Swift Closures.md",
     "Swift/Swift Functions.md",
     "Swift/Swift Variables.md",
