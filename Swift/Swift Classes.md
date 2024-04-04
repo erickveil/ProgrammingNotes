@@ -220,3 +220,19 @@ copy.number = 2 // Only `copy` is modified, not `original`
 ```
 
 This method acts similarly to a copy constructor but is manually defined. Swift's emphasis on value types for data that needs to be copied and the explicit handling required for copying reference types helps clarify ownership and mutation in your code.
+
+# Static Methods
+
+You define a static method with the `static` keyword before the method’s func keyword. In a class, you can also use the `class` keyword instead of `static` to allow subclasses to override the superclass’s implementation of that method.
+
+```swift
+class MyClass {
+    static func myStaticMethod() {
+        print("This is a static method.")
+    }
+}
+
+// You can call the static method directly on the class without creating an instance of the class
+MyClass.myStaticMethod()
+```
+

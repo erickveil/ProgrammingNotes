@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Swift/Swift Guard Condition.md",
+                "file": "Swift/Swift Loops.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Swift/Swift Guard Condition.md",
+                "file": "Swift/Swift Loops.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Swift/Swift Guard Condition.md",
+                "file": "Swift/Swift Loops.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Swift/Swift Guard Condition.md"
+                "file": "Swift/Swift Loops.md"
               }
             }
           }
@@ -149,9 +149,10 @@
   "active": "82a8424d9fcf451f",
   "lastOpenFiles": [
     "Swift/Swift Classes.md",
+    "Swift/Swift Functions.md",
+    "Swift/Swift Loops.md",
     "Swift/Swift Guard Condition.md",
     "Swift/Swift Closures.md",
-    "Swift/Swift Functions.md",
     "Swift/Swift Variables.md",
     "README.md",
     "Swift"
