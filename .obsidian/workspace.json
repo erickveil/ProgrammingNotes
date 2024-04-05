@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Swift/Swift Loops.md",
+                "file": "Kotlin/MVI Jetpack Project Development.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Swift/Swift Loops.md",
+                "file": "Kotlin/MVI Jetpack Project Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Swift/Swift Loops.md",
+                "file": "Kotlin/MVI Jetpack Project Development.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Swift/Swift Loops.md"
+                "file": "Kotlin/MVI Jetpack Project Development.md"
               }
             }
           }
@@ -148,9 +148,10 @@
   },
   "active": "82a8424d9fcf451f",
   "lastOpenFiles": [
+    "Swift/Swift Loops.md",
+    "Kotlin/MVI Jetpack Project Development.md",
     "Swift/Swift Classes.md",
     "Swift/Swift Functions.md",
-    "Swift/Swift Loops.md",
     "Swift/Swift Guard Condition.md",
     "Swift/Swift Closures.md",
     "Swift/Swift Variables.md",
