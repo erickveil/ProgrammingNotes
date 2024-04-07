@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kotlin/MVI Jetpack Project Development.md",
+                "file": "Kotlin/Kotlin Coroutines.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin/MVI Jetpack Project Development.md",
+                "file": "Kotlin/Kotlin Coroutines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin/MVI Jetpack Project Development.md",
+                "file": "Kotlin/Kotlin Coroutines.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kotlin/MVI Jetpack Project Development.md"
+                "file": "Kotlin/Kotlin Coroutines.md"
               }
             }
           }
@@ -148,9 +148,11 @@
   },
   "active": "82a8424d9fcf451f",
   "lastOpenFiles": [
-    "Kotlin/Kotlin object Keyword.md",
-    "Kotlin/Kotlin When Statement.md",
     "Kotlin/MVI Jetpack Project Development.md",
+    "Kotlin/Kotlin Coroutines.md",
+    "Kotlin/Kotlin Architecture - Which One to Use.md",
+    "Kotlin/Kotlin When Statement.md",
+    "Kotlin/Kotlin object Keyword.md",
     "Swift/Swift Loops.md",
     "Swift/Swift Classes.md",
     "Swift/Swift Functions.md",

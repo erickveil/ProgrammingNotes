@@ -7,6 +7,7 @@ tags:
   - mvi
   - android
   - jetpack
+  - architecture
 ---
 For this project, we're going to use a JSON file as a simple data source and write a program that rolls for the random results on the table defined in the JSON.
 # Setting Up a New Project
@@ -643,7 +644,7 @@ Next we create a method to load it.
 
 We will use `viewModelScope.launch { }` to put the file loading into a coroutine. This will load the file asynchronously. It's possible that you'd want to create a state where `isLoading` is manipulated so the rest of the program knows it's safe to access the data. If the data source is particularly large, you might want to do this on a background thread. 
 
-We're goin got keep this simple here for this cast though:
+We're going to keep this simple here for this case though:
 ```kotlin
 private fun loadLootTable() {  
 	viewModelScope.launch {  
