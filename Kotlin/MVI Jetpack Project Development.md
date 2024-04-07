@@ -1,6 +1,6 @@
 ---
 title: MVI Jetpack Project Development
-layout: post
+layout: note
 date: 24-04-05
 tags:
   - kotlin
@@ -15,7 +15,7 @@ For this project, we're going to use a JSON file as a simple data source and wri
 
 # Set Up the Project Structure
 
-- **`   src/main/java` or `src/main/kotlin`**: Root directory for your Kotlin source files.
+- **`src/main/java` or `src/main/kotlin`**: Root directory for your Kotlin source files.
     - **`com/yourapplicationname`**: Your application's package.
         - **`data`**: Directory for data handling and network operations.
             - **`model`**: Contains model classes that represent the structure of your data. Your Kotlin class for the `Model` fits here.
@@ -24,7 +24,7 @@ For this project, we're going to use a JSON file as a simple data source and wri
             - **`view`**: Contains activities, fragments, and any other views.
             - **`viewmodel`**: Contains ViewModel classes which hold the logic to manage the UI's data in response to user actions.
         - **`util`**: Utility classes that provide common functionalities across the application.
-        - **`assets`**: Where we will keep data sources and other assets.
+- **`src/main/assets`**: Where we will keep data sources and other assets.
 
 # The JSON File
 
@@ -52,20 +52,24 @@ Under Gradle Scripts, there are two `build.gradle.kts` scripts.  The one you wan
 
 Add the following to the existing sections:
 
-```groovy
+```kotlin
 plugins {  
-id("org.jetbrains.kotlin.plugin.serialization") version "1.5.21"  
+id("org.jetbrains.kotlin.plugin.serialization") version "+"  
 }
 ```
 
 
-```groovy
+```kotlin
 dependencies {  
-implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")  
+implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:+")  
 }
 ```
 
 Be sure to sync the project when you're done with editing this file.
+
+Note that I use "+" when setting the version number. This will most often highlight in the editor with an option to use the latest version. You'll notice when looking at a lot of online documentation (such as blogs like this) that they tend to list specific version numbers. You want the latest version though. So use this trick.
+
+Also note that I use Kotlin syntax for my gradle files. Lots of online references will use groovy syntax.
 
 ### 2. Create the Model Class
 
@@ -378,8 +382,19 @@ For your application, where users interact with a "Roll on Loot Table" button to
         // Add more Intents here as your application grows
     }
     ```
-#### About Sealed Classes
-A `sealed` class cannot be instantiated on its own and can only be subclassed within the file in which it is declared. This feature allows you to define a closed set of subclasses that are known at compile time, making it easier to handle them when you're using them in, for example, `when` expressions. This is particularly useful in cases where a function or method can only return a limited, fixed number of types.
+
+So, think of this in terms of setting up the **state** objects for a state pattern:
+- We have a list of states (actually a list of intents) called `LootTableIntent`.
+- Every **intent** (every action a user might take with a UI, intending things to happen) is one of the state objects.
+- Each subclass of `LootTableIntent` is going to be used like each **state** would be.
+- So here we just have one intent/state, because this is a simple example.
+- That intent is `RollLootTable`
+- The notation `object RollLootTable : LootTableIntent()` is basically a shorthand for:
+	- Subclass the `LottTableIntent`, creating a new intent/state.
+	- Do it in a way that makes this a singleton.
+So it's basically here a supper powered `enum` value that better follows the state pattern than an enum would (which is why we have the state pattern).
+
+The `sealed` class ensures that all of the values for this state machine are going to be right here in this file only.
 ### Handling Intents in Your Architecture
 
 Once you have your Intents defined, the next steps in the MVI architecture involve creating a ViewModel that listens to these Intents, performs the necessary data processing (fetching the loot results in this case), and then publishes a new state to the UI.
@@ -388,41 +403,453 @@ Once you have your Intents defined, the next steps in the MVI architecture invol
 
 Your ViewModel will act as the intermediary that handles Intents, interacts with the Model to retrieve or manipulate data, and then generates a new ViewState that reflects the result of these operations. Here's a simplified version of what this might look like:
 
-1. **Define a ViewState**: First, define a data class that represents the state of your UI at any given time. This class will include all the necessary information to render your UI.
+#### 1. Define a ViewState 
+First, define a data class that represents the state of your UI at any given time. This class will include all the necessary information to render your UI.
 
+```kotlin
+data class LootTableViewState(
+	val isLoading: Boolean = false,
+	val resultText: String = "Result appears here",
+	val error: String? = null
+)
+```
+
+#### 2. Create a ViewModel
+Implement a ViewModel that handles the Intents and updates the ViewState accordingly.
+
+```kotlin
+class LootTableViewModel : ViewModel() {
+	private val _state = MutableStateFlow(LootTableViewState())
+	val state: StateFlow<LootTableViewState> = _state.asStateFlow()
+
+	fun processIntent(intent: LootTableIntent) {
+		when (intent) {
+			is LootTableIntent.RollLootTable -> rollLootTable()
+		}
+	}
+
+	private fun rollLootTable() {
+		// Simulate fetching data and updating the state
+		_state.value = _state.value.copy(
+			isLoading = true,
+			// Simulate fetching a random result
+			resultText = "Magic sword"
+		)
+		// Here, you would actually fetch the data from your model and update
+		// the state accordingly
+	}
+}
+```
+
+Breakdown:
+
+Here we set up the state machine:
+```kotlin
+ private val _state = MutableStateFlow(LootTableViewState())
+ val state: StateFlow<LootTableViewState> = _state.asStateFlow()
+```
+
+Here we look at the current intent/state and call a method depending on what it is.
+If we had different intents, they would each be handled by a separate `is` statement.
+
+```kotlin
+when (intent) {
+	is LootTableIntent.RollLootTable -> rollLootTable()
+}
+```
+
+Now here, we would be interacting with the Model and rolling on the table. We don't actaully do that yet. This is just a palceholder:
+
+```kotlin
+private fun rollLootTable() { ...
+```
+
+# Connect ViewModel with UI
+Finally, in your Composable function (`LootTableUIEnhanced`), we observe the `LootTableViewState` from your `LootTableViewModel` and update the UI accordingly. 
+
+Let's lay this out in order of the flow of MVI:
+
+### 1.  Give the Composable Function for the View Access to the ViewModel
+
+First, our Button and our Text are the user's Input and Output for this Intent. The ViewModel will be their connection to the business logic.
+
+In `LootTableUIEnhanced` we're going to get rid of the placeholder arguments and give it a `viewModel` object. 
+- We're going to use that to get the current state of the UI as represented by the `ViewModel`. 
+- The `StateFlow` in the `ViewModel` holds the current state, which includes all the data your UI might need to render itself. 
+- When you collect this state within your Composable function, you're telling Compose to re-compose (re-draw) your UI any time the state changes. 
+- This state could be the result of processing various intents, but it's not the intent itself.
+
+Change the function arguments:
+```kotlin
+fun LootTableUIEnhanced(viewModel: LootTableViewModel) {  
+```
+
+### 2. Capture The Intent From the User
+
+Change the Button Code:
+```kotlin
+Button( 
+	onClick = { 
+		viewModel.processIntent(LootTableIntent.RollLootTable) 
+	}, 
+```
+
+The `Button` Composable within `LootTableUIEnhanced` captures the user's intent to "roll the loot table" through its `onClick` listener. 
+When the user presses the button, this listener invokes the `processIntent` method on the `ViewModel` with an argument that signifies the specific action or intent (`LootTableIntent.RollLootTable` in this case).
+
+In the `processIntent` function, we basically have our "switch", the `when(intent) { is... }` statement where we look at the intent, then call the appropriate business logic.
+
+```kotlin
+fun processIntent(intent: LootTableIntent) {
+    when (intent) {
+        is LootTableIntent.RollLootTable -> rollLootTable()
+    }
+}
+```
+
+So now we have our Intent, `RollLootTable` and we call `rollLootTable()`.
+
+```kotlin
+private fun rollLootTable() {  
+	_state.value = _state.value.copy(  
+	isLoading = true,  
+	resultText = "Magic sword"  
+	)   
+}
+```
+
+Here, we do some work (in this case, just some example values are set) and the result is given to the state. 
+- **`_state.value`**: This accesses the current value of the `_state` `MutableStateFlow`.
+- **`.copy(isLoading = true, resultText = "Magic sword")`**: Since `LootTableViewState` is a data class, you can use the `copy` method to create a new instance of it with some properties changed. This line creates a new `LootTableViewState` where `isLoading` is set to `true`, and `resultText` is set to "Magic sword", while keeping all other properties the same as in the current state.
+- **Assignment**: The new state is then assigned back to `_state.value`, effectively updating the state.
+
+We had defined the state in this `ViewModel` class using our class, `LootTableViewState`:
+
+
+```kotlin
+private val _state = MutableStateFlow(LootTableViewState())  
+val state: StateFlow<LootTableViewState> = _state.asStateFlow()
+```
+
+- Here, `_state` is a private mutable state flow that you'll use within your `ViewModel` to update the state. 
+- Meanwhile, `state` is the public, read-only version of this state flow that the UI components can collect and observe for changes.
+
+### 3. Update the View With the State Changes
+
+Now, back at our View's Composable function, `LootTableUIEnhanced` where we want the value to update, we use the public access to the state to change the text that the user sees.
+
+Change the Text source:
+```kotlin
+Text(  
+	text = state.value.resultText,
+```
+This is the point where we observe the changes in the state stored in the ViewModel. It's "declarative" in that the UI automatically updates in response to this change (without "imperative" commands like `setText()`).
+
+We had defined the `state` before we started defining **Composables** (the visual UI elements usually referred to as "Controls" in other languages) which has access to the same ViewModel as the one we used in the Button. 
+
+Add at the top of the function:
+```kotlin
+val state = viewModel.state.collectAsState()
+```
+
+This brings us full circle from button click to setting Intent, to doing the work with the Model required by that Intent, and then updating the View with the changes.
+
+### 4. Update the MainActivity So That It Uses the View Correctly
+
+Finally, we need to make sure that `MainActivity` is calling `LootTableUIEnhanced` with the correct argument, now that we changed the signature of that function.
+
+Change the object passed to the function:
+```kotlin
+Surface() {  
+	LootTableUIEnhanced(viewModel())  
+}
+```
+
+The `viewModel()` method is part of Compose, and in this case it creates a new ViewModel to use.
+It automatically infers the type of `ViewModel` thanks to that function requiring a specific subclass - in this case `LootTableViewModel`. It also scopes that object to the activity it is created in (`MainActivity` in this case) so that it is preserved.
+
+In situations where type inference might not work as expected or when you want to be explicit, you can specify the `ViewModel` class directly:
+
+```kotlin
+val myViewModel: LootTableViewModel = viewModel()
+```
+
+Or, when passing it directly as a parameter without assigning it to a variable:
+
+```kotlin
+LootTableUIEnhanced(viewModel = viewModel())
+```
+
+# Working With the Actual Data Model
+
+At this point, we display a constant string when the user pushes the button. But we want to:
+
+- Load the JSON into the Model.
+- Chose a random item from the List of options.
+- Use that as the string displayed in our output box.
+
+### Create the Repository
+
+The repository is the class that we will use to manage our Data Model. From here, we will handle loading the JSON into a Model class.
+
+```kotlin
+class LootRepository(private val context: Context) {  
+
+	fun getLootTable(): LootTable? {  
+		val jsonString = loadJsonFromAssets("lootTable.json")  
+		return jsonString?.let { parseJsonToLootTable(it) }  
+	}  
+	  
+	private fun loadJsonFromAssets(fileName: String): String? {  
+		return try {  
+			context.assets.open(fileName).bufferedReader().use { it.readText() }  
+		} catch (ioException: IOException) {  
+			ioException.printStackTrace()  
+			null  
+		}  
+	}  
+	  
+	private fun parseJsonToLootTable(jsonString: String): LootTable? {  
+		return try {  
+			Json.decodeFromString(serializer(), jsonString)  
+		} catch (exception: SerializationException) {  
+			exception.printStackTrace()  
+			null  
+		}  
+	}  
+}
+```
+
+Since we set up the `LootTable` data model as serializable, we can just continue using kotlinx to parse.
+
+We will need the `Context` object so that we can load the JSON resource from the `assets` directory.
+
+### Use the Repository in the ViewModel
+
+Next we modify the ViewModel to load the JSON using the Repository. Since we only need to load it once and reference it, we can do that in the class's `init` method:
+
+First, we will need to modify our ViewModel to accept the `Context`.
+```kotlin
+class LootTableViewModel(context: Context): ViewModel() {
+```
+
+Then add some class members to instantiate the Repository and hold our Data Model where we will be referencing it.
+```kotlin
+private val repository = LootRepository(context)  
+private var lootTable: LootTable? = null
+```
+
+Next we create a method to load it.
+
+We will use `viewModelScope.launch { }` to put the file loading into a coroutine. This will load the file asynchronously. It's possible that you'd want to create a state where `isLoading` is manipulated so the rest of the program knows it's safe to access the data. If the data source is particularly large, you might want to do this on a background thread. 
+
+We're goin got keep this simple here for this cast though:
+```kotlin
+private fun loadLootTable() {  
+	viewModelScope.launch {  
+		lootTable = repository.getLootTable()  
+	}  
+}
+```
+
+Finally, we just run this in the `init`.
+```kotlin
+init {
+	loadLootTable()
+}
+```
+
+### Roll on the Table
+
+Let's put the actual roll in its own method.
+
+If we were certain of the presence of data (we are not, since the JSON can have *anything*, but let's suppose) then we can just select a random item from the list with
+```kotlin
+lootTable.results.random()
+```
+
+But we want to make sure we're not performing operations on null objects, so we will use a lambda with `takeIf { it }` which will return `null` if any of the optional values are missing, or execute the `random()` method if all is well.
+```kotlin
+private fun getRandomLootItem(): String? {  
+	return lootTable?.results?.takeIf { it.isNotEmpty() }?.random()  
+}
+```
+
+Now we can remove the placeholder code and select a random item from the table instead:
+```kotlin
+private fun rollLootTable() {  
+	val randomItem = getRandomLootItem()  
+	_state.value = _state.value.copy(  
+		isLoading = false,  
+		resultText = randomItem ?: "No loot found"  
+	)  
+}
+```
+
+This function updates the `_state` with a new value, setting `isLoading` to `false` (assuming you're using it to show a loading indicator) and `resultText` to the randomly selected item. If no item is found (for example, if `results` is empty or `lootTable` is not loaded), it sets `resultText` to "No loot found".
+#### Note on Safety and Randomness
+
+- **Null Safety**: The use of the safe call operator (`?.`) and the Elvis operator (`?:`) ensures that the function gracefully handles cases where `lootTable` might not be initialized or `results` is empty.
+    
+- **Randomness**: The `random()` function provides an easy and concise way to get a random element. Ensure your list has elements before calling `.random()` to avoid exceptions. The check `it.isNotEmpty()` ensures this safety.
+
+# Dependency Injection
+
+## Hilt
+
+For injecting `Context` into your `ViewModel`, the most appropriate and modern approach in Android development, especially within the scope of recommended practices by Google, is to use **Hilt** for dependency injection. Hilt simplifies the process, ensures safe handling of the `Context`, and keeps your code clean and manageable. Here's why Hilt is particularly suited for this task and how to do it:
+
+## Why Hilt?
+
+- **Lifecycle Awareness**: Hilt is designed to be aware of Android lifecycles, ensuring that the correct type of `Context` (application, activity, etc.) is provided where needed, reducing the risk of memory leaks.
+- **Simplicity**: Hilt abstracts away much of the boilerplate code needed for dependency injection, making your codebase simpler and more readable.
+- **Scalability**: As your project grows, Hilt makes it easier to manage dependencies across different components of your Android app.
+- **Integration with Jetpack**: Hilt works seamlessly with other Jetpack components, including `ViewModels`, and follows best practices set by the Android team.
+
+## Add Hilt to Your Project
+
+Ensure you have Hilt set up in your project by adding the necessary dependencies and plugins. In your `build.gradle` (project level), you need to include the Hilt Gradle plugin:
+
+```groovy
+plugins { 
+	...
+	id("com.google.dagger.hilt.android") version "2.44" apply false
+}
+
+buildscript {  
+	dependencies {  
+		classpath("com.google.dagger:hilt-android-gradle-plugin:2.44")  
+	}  
+}
+```
+
+And in your `build.gradle` (app/module level), apply the plugin and add Hilt dependencies:
+
+```groovy
+plugins {  
+	id("kotlin-kapt")  
+	id("dagger.hilt.android.plugin")  
+}
+
+dependencies {
+	implementation("com.google.dagger:hilt-android:2.44")  
+	kapt("com.google.dagger:hilt-android-compiler:2.44")
+}
+```
+
+## The Application Class
+
+In Android development, the `Application` class in Android serves as a base class for maintaining global application state before any activity, service, or receiver objects (components) are created. It's like the entry point to your application, but not exactly the "main" as you would find in other types of programs, like a Java console application or C++ program. Instead, Android decides which component (Activity, Service, etc.) to launch based on the intent it receives and the app's manifest declarations.
+
+### Why You Might Not See an Application Class
+
+It's perfectly normal for small or simple Android projects not to have a custom `Application` class if they don't need to initialize global state or libraries at the application start. Your `MainActivity` can indeed seem like the "main" part of your app since it's often the entry point for user interaction.
+
+### Purpose of an Application Class
+
+However, when you start needing to initialize global libraries, handle application-wide state, or work with frameworks that require initialization (like Hilt for dependency injection), defining a custom `Application` class becomes necessary. It allows you to:
+
+- Initialize libraries at the start of your app's lifecycle, before any activity is started.
+- Maintain global application state or resources.
+- Use services like dependency injection frameworks more effectively.
+
+### How to Create and Use an Application Class with Hilt
+
+1. **Create a Custom Application Class**: The `@HiltAndroidApp` annotation is important here; it sets up Hilt for dependency injection across the application. This is all we really need at this point.
     ```kotlin
-    data class LootTableViewState(
-        val isLoading: Boolean = false,
-        val resultText: String = "Result appears here",
-        val error: String? = null
-    )
-    ```
+    import android.app.Application
+    import dagger.hilt.android.HiltAndroidApp
 
-2. **Create a ViewModel**: Implement a ViewModel that handles the Intents and updates the ViewState accordingly.
-
-    ```kotlin
-    class LootTableViewModel : ViewModel() {
-        private val _state = MutableStateFlow(LootTableViewState())
-        val state: StateFlow<LootTableViewState> = _state.asStateFlow()
-
-        fun processIntent(intent: LootTableIntent) {
-            when (intent) {
-                is LootTableIntent.RollLootTable -> rollLootTable()
-            }
-        }
-
-        private fun rollLootTable() {
-            // Simulate fetching data and updating the state
-            _state.value = _state.value.copy(
-                isLoading = true,
-                // Simulate fetching a random result
-                resultText = "Magic sword"
-            )
-            // Here, you would actually fetch the data from your model and update the state accordingly
-        }
+    @HiltAndroidApp
+    class TableRollerApp : Application() {
+        // Initialization code here
     }
     ```
 
-3. **Connect ViewModel with UI**: Finally, in your Composable function (`LootTableUIEnhanced`), observe the `LootTableViewState` from your `LootTableViewModel` and update the UI accordingly. You'll also need to modify the `onRollTable` lambda to send the `RollLootTable` Intent to your ViewModel.
 
-This approach keeps your UI code clean and focused on displaying data, while your ViewModel handles the logic and state management, adhering to the principles of MVI.
+2. **Declare It in Your AndroidManifest.xml**: Once you've created your custom `Application` class, you need to declare it in your `AndroidManifest.xml` so the Android system knows to use it:
+
+    ```xml
+    <application
+        android:name=".TableRollerApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+        <!-- Your activities and other components -->
+    </application>
+    ```
+   
+We would replace `".TableRollerApp"` with the actual path to the custom `Application` class if it's not in the root package. In this case, we've put it on the same level as `MainActivity` in our file tree. You can see in the manifest that MainActivity is still in the `LAUNCHER` category.
+
+### Injecting Context into the ViewModel
+
+Use `@HiltViewModel` on your ViewModel and inject `Context` using `@ApplicationContext` to ensure you're using the application context, which is safe:
+```kotlin
+@HiltViewModel
+class LootTableViewModel @Inject constructor(
+    @ApplicationContext private val context: Context) 
+    : ViewModel() {
+    // Use context as needed
+}
+```
+
+The `@ApplicationContext` is going to get flagged as "This field leaks Context." This warning, when you're using `@ApplicationContext` in a `ViewModel` with Hilt, can be a bit misleading because using `@ApplicationContext` is actually the recommended practice to avoid context leaks. This annotation ensures that you are provided with the application context, not an activity context, which is safe to retain across the configuration changes since it's tied to the lifecycle of the entire application, not just a single activity or view.
+##### Understanding the Context
+- **Application Context**: It's a context tied to the lifecycle of the application, not an activity. It's safe to hold onto this context for long periods, or even for the lifetime of your app, which is why it's recommended for use in `ViewModels` and other long-lived components.
+- **Activity Context**: It's tied to the lifecycle of an activity. Holding a reference to it in a `ViewModel` or any component that outlives an activity instance can lead to memory leaks.
+
+### Prepare Your Activity or Fragment
+
+Ensure your `Activity` or `Fragment` is ready to work with Hilt by annotating them with `@AndroidEntryPoint`:
+
+```kotlin
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
+    // Now Hilt can inject dependencies into MainActivity, and you can obtain ViewModels via Hilt
+}
+```
+
+This setup ensures that your ViewModel receives the `Context` in a safe, efficient, and scalable manner, adhering to best practices recommended by the Android team.
+
+# MVI and the Files We Created
+
+Now we have a working table roller, where the table can be described using a JSON file.
+
+Our Android project structure, organized according to the Model-View-Intent (MVI) architecture, aligns each component with one of the MVI layers. Here's how each file fits into the MVI pattern:
+
+### Model
+The Model is responsible for the data-related logic, such as fetching, storing, and manipulating data.
+
+- **`/data/model/LootTable.kt`**: Represents the data structure of your loot table. It's the data model part of the Model layer.
+- **`/data/repository/LootRepository.kt`**: Acts as the data source layer that would fetch, cache, and manage your loot data (e.g., reading the `lootTable.json` file). It's part of the Model layer, serving as an intermediary between the raw data and the ViewModel.
+
+### View
+The View is responsible for presenting data to the user and capturing user inputs.
+
+- **`/ui/view/LootTableView.kt`**: Defines the UI components (Composables) that display the loot table and button to the user. It's part of the View layer in MVI.
+- **`/MainActivity.kt`**: While not a Composable itself, it sets up the content view for your app and could be considered part of the View layer since it's where your Composables are hosted.
+- **`/TableRollerApp.kt`**: Likely the application class. While not directly part of the MVI pattern, it's essential for initializing app-wide components, like Hilt for dependency injection.
+
+### Intent
+The Intent layer captures the intentions to change the state of the app based on user input or other actions.
+
+- **`/ui/intent/LootTableIntent.kt`**: Defines the actions (intents) that can be taken in the app, like rolling the loot table. It directly corresponds to the Intent layer in MVI.
+
+### ViewModel
+Though not traditionally separate in the MVI acronym, the ViewModel acts as a bridge between the View and Model, handling state and intents.
+
+- **`/ui/viewmodel/LootTableViewModel.kt`**: Contains the business logic responding to user intents, fetching data from the repository, and preparing it to be displayed by the View. It processes intents, updates the state, and thus serves as a crucial part of both the Intent and Model layers.
+
+### ViewState
+ViewState represents the current state of the UI, which is a concept closely tied to both the View and the ViewModel.
+
+- **`/ui/viewstate/LootTableViewState.kt`**: Defines the various states of the UI (e.g., loading, success, error) based on the data from the ViewModel. It's closely related to both the View (as it dictates what the View displays) and the ViewModel (as it's shaped by the data processing logic within the ViewModel).
+
+# Conclusion
+This project structure reflects a clear separation of concerns as prescribed by the MVI architecture, with each component playing a specific role:
+
+- **Model**: `LootTable.kt`, `LootRepository.kt`
+- **View**: `LootTableView.kt`, `MainActivity.kt`
+- **Intent**: `LootTableIntent.kt`
+- **Bridge (ViewModel and ViewState)**: `LootTableViewModel.kt`, `LootTableViewState.kt`
+
+This organization facilitates understanding, maintaining, and scaling your application by clearly delineating responsibilities within your codebase.
