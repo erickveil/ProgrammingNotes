@@ -54,7 +54,7 @@ suspend fun fetchDataFromNetwork(): String {
 
 ## Use in MVI
 
-In an MVI project, I used the following function to load a JSON file and parse it into a Data Model. 
+In an MVI project I was working on, I used the following function to load a JSON file and parse it into a Data Model. 
 ```kotlin
 private fun loadLootTable() { 
 	viewModelScope.launch { 
@@ -106,7 +106,7 @@ In UI applications, direct use of `join()` is less common because it can lead to
 
 The `suspend` keyword in Kotlin allows asynchronous and non-blocking programming. It marks a function as a suspending function, which means that the function can suspend the execution of a coroutine without blocking the thread on which it's running. This capability is foundational for writing asynchronous code in Kotlin that's both efficient and easy to manage.
 
-### Key Characteristics of Suspended Functions:
+### Characteristics of Suspended Functions:
 
 - **Non-Blocking**: When a suspending function is called, it doesn't block the thread it's running on. Instead, it suspends the coroutine in which it's called. This is crucial for performing long-running operations, such as network requests or database transactions, without freezing the application's user interface.
 
