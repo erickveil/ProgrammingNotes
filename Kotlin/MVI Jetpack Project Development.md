@@ -359,14 +359,6 @@ For managing UI styling elements such as dimensions, typography, and more in a c
     }
     ```
 
-### Benefits of This Approach
-
-- **Consistency**: Ensures that our UI maintains a consistent look and feel across different screens and components.
-- **Maintainability**: Makes it easier to update and manage UI dimensions since they're centralized. For example, changing the default padding or the minimum height of elements across our app can be done in one place.
-- **Readability**: Improves the readability of our Composable functions by abstracting away the raw values and giving them descriptive names.
-
-This method aligns with best practices for managing theme-related properties and ensures that our application's UI is scalable and easy to maintain. Similar to how you would manage colors and typography, handling dimensions in a centralized manner aids in achieving a consistent design language throughout our app.
-
 # Define the Intent
 
 In the Model-View-Intent (MVI) architecture, after setting up the Model and the View, the next step indeed involves defining Intents. Intents in MVI are responsible for representing the user's intentions, essentially the actions that the user can perform on the UI that might require some data processing or logic execution, such as fetching data, updating the UI, etc.
