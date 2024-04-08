@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kotlin/Kotlin Coroutines.md",
+                "file": "Kotlin/Dependency Injection and Hilt.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin/Kotlin Coroutines.md",
+                "file": "Kotlin/Dependency Injection and Hilt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin/Kotlin Coroutines.md",
+                "file": "Kotlin/Dependency Injection and Hilt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kotlin/Kotlin Coroutines.md"
+                "file": "Kotlin/Dependency Injection and Hilt.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   "active": "82a8424d9fcf451f",
   "lastOpenFiles": [
     "Kotlin/MVI Jetpack Project Development.md",
+    "Kotlin/Dependency Injection and Hilt.md",
+    "Kotlin/Kotlin Lambdas.md",
     "Kotlin/Kotlin Coroutines.md",
     "Kotlin/Kotlin Architecture - Which One to Use.md",
     "Kotlin/Kotlin When Statement.md",

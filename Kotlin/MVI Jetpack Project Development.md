@@ -8,6 +8,8 @@ tags:
   - android
   - jetpack
   - architecture
+  - dependency_injection
+  - state_pattern
 ---
 For this project, we're going to use a JSON file as a simple data source and write a program that rolls for the random results on the table defined in the JSON.
 # Setting Up a New Project
