@@ -169,3 +169,76 @@ Notice how this closely resembles how I set up singletons in C++. The pattern in
 
 The custom delegate example in Kotlin can mimic the singleton pattern to some extent by lazily loading and caching a resource, ensuring that it's only created once upon first access. However, the scope and application are a bit different. In the Kotlin example, the focus is on lazy initialization and property delegation, which is a broader concept than just implementing singletons.
 
+# Creating Your Own Hilt Modules
+
+To get the decoupling and testability benefits of Dependency Injection (DI) by injecting an instance of class A into class B, you'll follow a few steps. Assuming you're working in a Kotlin environment and wish to apply these principles perhaps within an Android context or any Kotlin-based application, here's a general approach:
+
+### Step 1: Define Your Classes
+
+First, define your classes. For DI to be most effective, class A should implement an interface, which class B will depend on, rather than depending directly on class A. This interface-based approach enhances testability and decoupling.
+
+```kotlin
+interface AInterface {
+    fun doSomething()
+}
+
+class A : AInterface {
+    override fun doSomething() {
+        // Implementation details...
+    }
+}
+
+class B(private val a: AInterface) {
+    fun useA() {
+        a.doSomething()
+    }
+}
+```
+
+### Step 2: Set Up Dependency Injection
+
+1. **Add Hilt Dependencies**: Ensure your project's `build.gradle` files are set up for Hilt.
+2. **Annotate Your Application Class**: Use `@HiltAndroidApp` on your Application class.
+
+   ```kotlin
+   @HiltAndroidApp
+   class MyApplication : Application()
+   ```
+
+3. **Define Modules for Dependency Provisioning**: Create a Hilt module that tells Hilt how to provide instances of `AInterface` and `B`.
+
+   ```kotlin
+   @Module
+   @InstallIn(SingletonComponent::class)
+   object MyModule {
+       @Provides
+       @Singleton
+       fun provideAInterface(): AInterface = A()
+   
+       @Provides
+       fun provideB(aInterface: AInterface): B = B(aInterface)
+   }
+   ```
+
+4. **Inject Into Your Classes**: With Hilt, injecting into Android framework classes (like Activities, Fragments, etc.) is straightforward. For other classes, you'll usually pass dependencies through their constructors, as shown with class B.
+
+### Step 3: Use Your Classes
+
+With Hilt, once everything is set up, you can inject `B` into your Android components (e.g., Activities, Fragments) and use it:
+
+```kotlin
+@AndroidEntryPoint
+class MyActivity : AppCompatActivity() {
+
+    @Inject lateinit var b: B
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_my)
+
+        b.useA()
+    }
+}
+```
+
+For manual DI or smaller-scale applications, you control the creation and injection of dependencies directly in your code, as shown in the non-Android example.

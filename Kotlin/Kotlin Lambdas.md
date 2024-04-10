@@ -16,7 +16,7 @@ val lambdaName: (InputType) -> ReturnType = { input ->
 }
 ```
 
-Let's put this into a concrete example. Suppose you have a list of integers and you want to define a lambda that checks if a number is positive. You could write:
+Let's put this into a concrete example. Suppose we have a list of integers and we want to define a lambda that checks if a number is positive. We could write:
 
 ```kotlin
 val isPositive: (Int) -> Boolean = { number ->
@@ -24,9 +24,9 @@ val isPositive: (Int) -> Boolean = { number ->
 }
 ```
 
-In this example, `isPositive` is a lambda expression that takes an `Int` as input and returns a `Boolean`, indicating whether the input number is greater than zero. You've explicitly defined the input type `(Int)` and the return type `Boolean` of the lambda.
+In this example, `isPositive` is a lambda expression that takes an `Int` as input and returns a `Boolean`, indicating whether the input number is greater than zero. We've explicitly defined the input type `(Int)` and the return type `Boolean` of the lambda.
 
-Once you've defined this lambda, you can use it as an argument to higher-order functions such as `filter`:
+Once we've defined this lambda, we can use it as an argument to higher-order functions such as `filter`:
 
 ```kotlin
 val numbers = listOf(-2, -1, 0, 1, 2)
@@ -35,7 +35,7 @@ val positiveNumbers = numbers.filter(isPositive)
 
 Here, `filter` uses the `isPositive` lambda to filter out only the positive numbers from the list.
 
-If your lambda doesn't return any value (i.e., returns `Unit`), or if the context makes the types clear, you can omit the type annotations:
+If our lambda doesn't return any value (i.e., returns `Unit`), or if the context makes the types clear, we can omit the type annotations:
 
 ```kotlin
 val printMessage = { message: String ->
@@ -56,7 +56,7 @@ numbers.forEach { println(it) }
 
 In this example, `forEach` is a higher-order function that takes a lambda expression as its parameter. The lambda `{ println(it) }` is executed for each element in the `numbers` list. Since there's only one parameter to the lambda and its type can be inferred, we use `it` to refer to each element as it's iterated over.
 
-Kotlin lambdas allow for more complex operations too, not just iteration. You can use them for filtering, mapping, and aggregating data in collections. Here's a slightly more complex example using `filter` and `map`:
+Kotlin lambdas allow for more complex operations too, not just iteration. We can use them for filtering, mapping, and aggregating data in collections. Here's a slightly more complex example using `filter` and `map`:
 
 ```kotlin
 val doubledPositiveNumbers = numbers.filter { it > 0 }.map { it * 2 }
@@ -66,9 +66,9 @@ In this case, `filter` removes any numbers that don't satisfy the condition `{ i
 
 ### Optional Parentheses for the Lambda Argument
 
-When you're calling a function with a lambda expression as the last parameter, you have the option to place the lambda outside the parentheses. This convention is particularly common with higher-order functions, like `filter` and `map`, which take functions as parameters.
+When we're calling a function with a lambda expression as the last parameter, we have the option to place the lambda outside the parentheses. This convention is particularly common with higher-order functions, like `filter` and `map`, which take functions as parameters.
 
-So, when you see:
+So, when we see:
 
 ```kotlin
 numbers.filter { it > 0 }
@@ -91,7 +91,7 @@ val result = list.filter { it > 0 }
 ```
 ### Multiple Parameters
 
-Lambdas in Kotlin can also have multiple parameters. In such cases, you can't use `it`, and you need to declare each parameter explicitly, enclosed in parentheses. For example:
+Lambdas in Kotlin can also have multiple parameters. In such cases, we can't use `it`, and we need to declare each parameter explicitly, enclosed in parentheses. For example:
 
 ```kotlin
 val sum = listOf(1 to 2, 3 to 4).map { (a, b) -> a + b }

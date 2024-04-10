@@ -18,7 +18,7 @@ The `when` statement simplifies branching logic, much like the switch-case state
    }
    ```
 
-2. **Checking Against Multiple Values**: You can check a value against multiple possible matches in a single line.
+2. **Checking Against Multiple Values**: We can check a value against multiple possible matches in a single line.
 
    ```kotlin
    when (x) {
@@ -27,7 +27,7 @@ The `when` statement simplifies branching logic, much like the switch-case state
    }
    ```
 
-3. **Using Arbitrary Conditions**: Instead of checking for equality, you can evaluate more complex conditions.
+3. **Using Arbitrary Conditions**: Instead of checking for equality, we can evaluate more complex conditions.
 
    ```kotlin
    when {
@@ -48,7 +48,7 @@ The `when` statement simplifies branching logic, much like the switch-case state
    println(result)
    ```
 
-5. **Checking Types**: You can use `when` to check the type of an object by using the `is` keyword. This can simplify type checks and casting.
+5. **Checking Types**: we can use `when` to check the type of an object by using the `is` keyword. This can simplify type checks and casting.
 
    ```kotlin
    val response = when (val msg = fetchMessage()) {
@@ -58,7 +58,7 @@ The `when` statement simplifies branching logic, much like the switch-case state
    }
    ```
 
-6. **Without an Argument**: If you omit the argument, `when` works like a series of `if-else if` statements. This is what makes it possible to use arbitrary conditions.
+6. **Without an Argument**: If we omit the argument, `when` works like a series of `if-else if` statements. This is what makes it possible to use arbitrary conditions.
 
    ```kotlin
    when {
@@ -71,11 +71,11 @@ The `when` statement simplifies branching logic, much like the switch-case state
 
 # Sealed Classes
 
-A `sealed` class is a type of class that restricts class hierarchies. A `sealed` class cannot be instantiated on its own and can only be subclassed within the file in which it is declared. This allows you to define a closed set of subclasses that are known, making it easier to handle them exhaustively when you're using them in, for example, `when` expressions. 
+A `sealed` class is a type of class that restricts class hierarchies. A `sealed` class cannot be instantiated on its own and can only be subclassed within the file in which it is declared. This allows us to define a closed set of subclasses that are known, making it easier to handle them exhaustively when we're using them in, for example, `when` expressions. 
 
 It solves the problem: Is there another subclass/state/strategy hidden somewhere else in this giant code-base that I'm not accounting for?
 
-This is useful in cases where a function or method can only return a limited, fixed number of types, such as in scenarios where you are using a [state](https://refactoring.guru/design-patterns/state) or [strategy](https://refactoring.guru/design-patterns/strategy) pattern.
+This is useful in cases where a function or method can only return a limited, fixed number of types, such as in scenarios where we are using a [state](https://refactoring.guru/design-patterns/state) or [strategy](https://refactoring.guru/design-patterns/strategy) pattern.
 
 
 ```kotlin
@@ -94,6 +94,6 @@ fun handleResult(result: Result) {
 }
 ```
 
-In this example, `Result` is a sealed class with three possible types: `Success`, `Failure`, and `Loading`. When using a `when` expression to handle instances of `Result`, you are guaranteed to handle all possible cases. Because all subclasses must be declared in the same file as the sealed class, this tightly couples the subclasses with their parent, ensuring that the set of subclasses is always known and closed.
+In this example, `Result` is a sealed class with three possible types: `Success`, `Failure`, and `Loading`. When using a `when` expression to handle instances of `Result`, we are guaranteed to handle all possible cases. Because all subclasses must be declared in the same file as the sealed class, this tightly couples the subclasses with their parent, ensuring that the set of subclasses is always known and closed.
 
-When you're classing a type for state or strategy patterns, the classes usually aren't very large (If they are, you might want to refactor). So having all the classes in one file for all subclasses should not create an unmaintainable mega-file.
+When we're classing a type for state or strategy patterns, the classes usually aren't very large (If they are, we might want to refactor). So having all the classes in one file for all subclasses should not create an unmaintainable mega-file.
