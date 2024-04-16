@@ -146,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82a8424d9fcf451f",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
+    "README.md~",
     "Kotlin/Kotlin Automated Testing.md",
     "Kotlin/Kotlin Unit Testing With Jetpack and Espresso.md",
     "Kotlin/Providing Context to ViewModels in Kotlin.md",
