@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4526c3ecce5cd150",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitHub Actions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin/Kotlin Automated Testing.md",
+                "file": "GitHub Actions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin/Kotlin Automated Testing.md",
+                "file": "GitHub Actions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kotlin/Kotlin Automated Testing.md"
+                "file": "GitHub Actions.md"
               }
             }
           }
@@ -146,9 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82a8424d9fcf451f",
+  "active": "4526c3ecce5cd150",
   "lastOpenFiles": [
     "Kotlin/Kotlin Automated Testing.md",
+    "GitHub Actions.md",
+    "README.md~",
     "Kotlin/Kotlin Unit Testing With Jetpack and Espresso.md",
     "Kotlin/Providing Context to ViewModels in Kotlin.md",
     "Kotlin/MVVM Project Development.md",
