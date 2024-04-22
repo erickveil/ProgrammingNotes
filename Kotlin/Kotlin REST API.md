@@ -6,6 +6,8 @@ tags:
   - kotlin
   - rest
 ---
+
+[Project Link](https://github.com/erickveil/Kotlin-ChatGPT-REST)
 # Creating the POST
 
 For this project, I'm going to use OpenAI's API, because it's pretty simple. The only authorization it requires is a valid account key, which is a hash string.
