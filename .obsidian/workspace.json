@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Swift/Swift Reading and Writing Files.md",
+                "file": "Swift/Swift Socket Client.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Swift/Swift Reading and Writing Files.md",
+                "file": "Swift/Swift Socket Client.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Swift/Swift Reading and Writing Files.md",
+                "file": "Swift/Swift Socket Client.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Swift/Swift Reading and Writing Files.md"
+                "file": "Swift/Swift Socket Client.md"
               }
             }
           }
@@ -161,8 +161,9 @@
   },
   "active": "4526c3ecce5cd150",
   "lastOpenFiles": [
-    "Swift/Swift UI.md",
     "Swift/Swift Reading and Writing Files.md",
+    "Swift/Swift Socket Client.md",
+    "Swift/Swift UI.md",
     "Kotlin/Kotlin REST API.md",
     "GitHub Actions.md",
     "Kotlin/Kotlin Automated Testing.md",
