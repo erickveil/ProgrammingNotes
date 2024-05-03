@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "82a8424d9fcf451f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kotlin/Kotlin Automated Testing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4526c3ecce5cd150",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kotlin/Navigating Activities and Fragments in Kotlin.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "37e38cbce5f5d08f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C-Sharp Programming on Linux.md",
+                "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C-Sharp Programming on Linux.md",
+                "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C-Sharp Programming on Linux.md",
+                "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C-Sharp Programming on Linux.md"
+                "file": "Kotlin/Kotlin Jetpack Navigation.md"
               }
             }
           }
@@ -174,6 +149,7 @@
   "active": "37e38cbce5f5d08f",
   "lastOpenFiles": [
     "Kotlin/Navigating Activities and Fragments in Kotlin.md",
+    "Kotlin/Kotlin Jetpack Navigation.md",
     "C-Sharp Programming on Linux.md",
     "Swift/Swift Socket Client.md",
     "Swift/Swift Reading and Writing Files.md",
@@ -199,7 +175,6 @@
     "Swift/Swift Guard Condition.md",
     "Swift/Swift Closures.md",
     "Swift/Swift Variables.md",
-    "README.md",
     "Swift"
   ]
 }
