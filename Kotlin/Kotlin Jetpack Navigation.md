@@ -1,7 +1,9 @@
 ---
 title: Kotlin Jetpack Navigation
 layout: note
-repository: https://github.com/erickveil/JetpackNavigation
+repository:
+  - https://github.com/erickveil/JetpackNavigation 
+  - https://github.com/erickveil/FragmentNavigation
 tags:
   - android
   - jetpack
@@ -178,7 +180,7 @@ class MainActivity : ComponentActivity() {
 
 This setup should create a simple navigational flow between three color-coded screens, each with navigation and back functionality using Jetpack Compose and the Navigation component.
 
-# Intent Based Navigation
+# Intent Based Navigation - Navigating Activities
 
 Jetpack Navigation is primarily designed to handle navigation within a single activity using fragments, not multiple activities. The recommended modern Android architecture suggests moving towards a single activity design with multiple fragments to handle different screens in your app. This model provides a more consistent and predictable handling of the Android lifecycle and back stack.
 
@@ -263,119 +265,148 @@ To implement the same basic navigation idea using fragments in a single activity
 3. **Design the Navigation Graph**: Define how fragments are interconnected.
 4. **Implement the Navigation**: Use NavController to handle fragment transitions.
 
-Let's break down these steps:
+### Step 1: Set Up Your Android Project
+First, make sure your project includes the necessary dependencies for Jetpack Navigation:
 
-### Step 1: Setup Your Project
-Add the necessary dependencies in your `build.gradle` (Module: app) file:
+1. **Add Navigation dependencies to your `build.gradle` (Module: app):**
 
-```groovy
-dependencies {
-    def nav_version = "2.3.5" // Use the latest version available
+   ```kotlin
+   dependencies {
+		implementation("androidx.navigation:navigation-fragment-ktx:+")  
+		implementation("androidx.navigation:navigation-ui-ktx:+")
+   }
+   ```
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-}
+### Step 2: Create Fragment Layouts
+Define the layouts for each of your fragments in XML. Here’s an example layout for `PinkFragment`:
+
+**res/layout/fragment_pink.xml**
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFC0CB">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pink Fragment"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/button_to_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Green"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/button_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Blue"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:background="#808080"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
 ```
 
-Also, make sure to apply the Kotlin Android Extensions plugin (if not already):
+Create similar layouts for `GreenFragment` and `BlueFragment`, changing the background color and text appropriately. Note that we can use the WISIWYG in Android Studio to lay these out.
 
-```groovy
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-```
+### Step 3: Create the Fragments
+Define the fragment classes. Here's how you could set up `PinkFragment`:
 
-### Step 2: Create the Fragments
-Create three fragments corresponding to each of your activities. Here's how you might define `MainFragment`:
-
-**MainFragment.kt**
+**PinkFragment.kt**
 ```kotlin
-class MainFragment : Fragment() {
+class PinkFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_pink, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.buttonToSecond).setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_secondFragment)
+        view.findViewById<Button>(R.id.button_to_green).setOnClickListener {
+            findNavController().navigate(R.id.action_pinkFragment_to_greenFragment)
+        }
+        view.findViewById<Button>(R.id.button_to_blue).setOnClickListener {
+            findNavController().navigate(R.id.action_pinkFragment_to_blueFragment)
+        }
+        view.findViewById<Button>(R.id.button_back).setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 }
 ```
 
-**fragment_main.xml**
-```xml
-<LinearLayout ...>
-    <Button
-        android:id="@+id/buttonToSecond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go to Second Fragment" />
-</LinearLayout>
-```
+Define `GreenFragment` and `BlueFragment` in a similar way, adjusting the navigation actions as necessary.
 
-Create similar files for `SecondFragment` and `ThirdFragment`.
-
-### Step 3: Design the Navigation Graph
-In your `res` directory, create a navigation resource file named `nav_graph.xml`. Define the navigation paths between your fragments:
+### Step 4: Define the Navigation Graph
+Create a navigation graph in the `res/navigation` directory. Just like the actual Fragments, here we can use Android Studio's WYSIWYG editor for visually laying out the Navigation Graph. It allows us to see exactly where the actions connect us.
 
 **nav_graph.xml**
 ```xml
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/pinkFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.myapp.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:id="@+id/pinkFragment"
+        android:name="com.example.myapp.PinkFragment"
+        android:label="fragment_pink"
+        tools:layout="@layout/fragment_pink">
         <action
-            android:id="@+id/action_mainFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_pinkFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+        <action
+            android:id="@+id/action_pinkFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.myapp.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.example.myapp.ThirdFragment"
-        android:label="fragment_third"
-        tools:layout="@layout/fragment_third">
-        <action
-            android:id="@+id/action_thirdFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+    <!-- Define GreenFragment and BlueFragment with similar actions -->
 </navigation>
 ```
 
-### Step 4: Implement the Navigation
-Set up a `NavHostFragment` in your activity's layout file (`activity_main.xml`):
+### Step 5: Set Up the NavHostFragment
+Ensure your main activity's layout includes a `NavHostFragment` that references the navigation graph.
 
+**activity_main.xml**
 ```xml
-<FrameLayout ...>
-    <fragment
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true" />
+
 </FrameLayout>
 ```
 
+Note how instead of a `<Fragment>` node, we use the `<FragmentContainerView>`. This allows Android to better set up the initial fragment when the application starts (though in practice, I don't see a difference).
+
 This setup allows each button in the fragments to navigate to the next fragment using `NavController`. You don't need a "back" button specifically because Android handles back navigation natively when using fragments and the navigation component, respecting the back stack automatically.
 
-This approach should set you up with a basic navigational flow between fragments in a single activity using Jetpack Navigation. It's scalable, easier to manage, and aligns with modern Android development practices.
+This approach should set you up with a basic navigational flow between fragments in a single activity using Jetpack Navigation. It's scalable, easier to manage than navigating whole Activities, and follows more modern Android development practices.

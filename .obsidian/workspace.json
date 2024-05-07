@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b1460eefc3db34c8",
+        "id": "95dca79f3026d32c",
         "type": "tabs",
         "children": [
           {
-            "id": "37e38cbce5f5d08f",
+            "id": "a1f639540959e69f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kotlin/Kotlin Jetpack Navigation.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Kotlin/Kotlin Jetpack Navigation.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +138,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "37e38cbce5f5d08f",
+  "active": "a1f639540959e69f",
   "lastOpenFiles": [
-    "Kotlin/Navigating Activities and Fragments in Kotlin.md",
     "Kotlin/Kotlin Jetpack Navigation.md",
+    "Kotlin/Navigating Activities and Fragments in Kotlin.md",
     "C-Sharp Programming on Linux.md",
     "Swift/Swift Socket Client.md",
     "Swift/Swift Reading and Writing Files.md",
