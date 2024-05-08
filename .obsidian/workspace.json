@@ -11,8 +11,12 @@
             "id": "a1f639540959e69f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "How to get an ssh server on Windows with Cygwin.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "How to get an ssh server on Windows with Cygwin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "How to get an ssh server on Windows with Cygwin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "How to get an ssh server on Windows with Cygwin.md"
+              }
             }
           }
         ]
@@ -140,14 +148,16 @@
   },
   "active": "a1f639540959e69f",
   "lastOpenFiles": [
+    "How to Install a new Cygwin package without reinstalling the entire program.md",
+    "How to get an ssh server on Windows with Cygwin.md",
+    "C-Sharp Programming on Linux.md",
+    "GitHub Actions.md",
     "Kotlin/Kotlin Jetpack Navigation.md",
     "Kotlin/Navigating Activities and Fragments in Kotlin.md",
-    "C-Sharp Programming on Linux.md",
     "Swift/Swift Socket Client.md",
     "Swift/Swift Reading and Writing Files.md",
     "Swift/Swift UI.md",
     "Kotlin/Kotlin REST API.md",
-    "GitHub Actions.md",
     "Kotlin/Kotlin Automated Testing.md",
     "README.md~",
     "Kotlin/Kotlin Unit Testing With Jetpack and Espresso.md",
@@ -165,8 +175,6 @@
     "Swift/Swift Classes.md",
     "Swift/Swift Functions.md",
     "Swift/Swift Guard Condition.md",
-    "Swift/Swift Closures.md",
-    "Swift/Swift Variables.md",
     "Swift"
   ]
 }
