@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to get an ssh server on Windows with Cygwin.md",
+                "file": "How to Use Custom QML Types in Qt6.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to get an ssh server on Windows with Cygwin.md",
+                "file": "How to Use Custom QML Types in Qt6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to get an ssh server on Windows with Cygwin.md",
+                "file": "How to Use Custom QML Types in Qt6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to get an ssh server on Windows with Cygwin.md"
+                "file": "How to Use Custom QML Types in Qt6.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "a1f639540959e69f",
   "lastOpenFiles": [
-    "How to Install a new Cygwin package without reinstalling the entire program.md",
     "How to get an ssh server on Windows with Cygwin.md",
+    "How to Use Custom QML Types in Qt6.md",
+    "How to Install a new Cygwin package without reinstalling the entire program.md",
     "C-Sharp Programming on Linux.md",
     "GitHub Actions.md",
     "Kotlin/Kotlin Jetpack Navigation.md",
@@ -174,7 +175,6 @@
     "Swift/Swift Loops.md",
     "Swift/Swift Classes.md",
     "Swift/Swift Functions.md",
-    "Swift/Swift Guard Condition.md",
     "Swift"
   ]
 }
