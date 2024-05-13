@@ -1,3 +1,11 @@
+---
+title: How to Use Custom QML Types in Qt6
+layout: note
+tags:
+  - Cpp
+  - Qt6
+---
+
 The documentation isn't clear about this and the wizard doesn't set it up for you. In the documentation, it makes it sound like you just need your Custom Type in the same directory as main.qml. Also, this will make the IDE properly highlight the Custom Type as if it's valid. But when you run, you will get an error like
 
 ```
