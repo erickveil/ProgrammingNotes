@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HowToCollectPacketsOverTime.md",
+                "file": "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HowToCollectPacketsOverTime.md",
+                "file": "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HowToCollectPacketsOverTime.md",
+                "file": "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HowToCollectPacketsOverTime.md"
+                "file": "Qt/How to Set Up Qt Unit Tests For a Large Project.md"
               }
             }
           }
@@ -146,10 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a1f639540959e69f",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
-    "How to Use Custom QML Types in Qt6.md",
+    "Qt",
     "HowToCollectPacketsOverTime.md",
+    "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
+    "Qt/How to Use Custom QML Types in Qt6.md",
     "How to Install a new Cygwin package without reinstalling the entire program.md",
     "How to get an ssh server on Windows with Cygwin.md",
     "C-Sharp Programming on Linux.md",
@@ -173,8 +175,6 @@
     "Kotlin/Kotlin Architecture - Which One to Use.md",
     "Kotlin/Kotlin When Statement.md",
     "Kotlin/Kotlin object Keyword.md",
-    "Swift/Swift Loops.md",
-    "Swift/Swift Classes.md",
     "Swift"
   ]
 }
