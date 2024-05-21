@@ -79,7 +79,7 @@ To filter and process messages of interest, you might need to use a script or co
 
 This command connects to the WebSocket server, filters messages that start with `42["status-update`, and processes the JSON data using `jq`.
 
-### Step 4: Handling the `status-update` Messages
+### Handling the `status-update` Messages
 
 You might want to write a small script to handle the JSON data more precisely. Here’s a bash script example to get you started:
 
@@ -140,7 +140,7 @@ or
 
 To establish a connection to the WebSocket and handle incoming JSON messages in C++/Qt, you can use the `QWebSocket` class provided by the Qt WebSockets module. Below is a step-by-step guide on how to do this:
 
-### Step 1: Include Qt WebSockets Module
+### Include Qt WebSockets Module
 
 Make sure you have the Qt WebSockets module installed. Add it to your `.pro` file:
 
@@ -148,7 +148,7 @@ Make sure you have the Qt WebSockets module installed. Add it to your `.pro` fil
 QT += websockets
 ```
 
-### Step 2: Create a WebSocket Client Class
+### Create a WebSocket Client Class
 
 Create a class to handle the WebSocket connection and process the incoming messages.
 
@@ -230,7 +230,7 @@ void WebSocketClient::onTextMessageReceived(const QString &message) {
 }
 ```
 
-### Step 3: Use the WebSocket Client in Your Application
+### Use the WebSocket Client in Your Application
 
 In your main application, create an instance of the `WebSocketClient` and connect the `jsonReceived` signal to a slot that will handle the new JSON data.
 
