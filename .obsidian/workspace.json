@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "05991998ba8f068c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Websockets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -159,10 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "52a70694aa29dcc1",
+  "active": "05991998ba8f068c",
   "lastOpenFiles": [
-    "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
+    "REST API on the Command Line and Qt.md",
     "Websockets.md",
+    "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Qt",
     "HowToCollectPacketsOverTime.md",
     "Qt/How to Use Custom QML Types in Qt6.md",
@@ -188,7 +201,6 @@
     "Kotlin/Kotlin Coroutines.md",
     "Kotlin/Kotlin Architecture - Which One to Use.md",
     "Kotlin/Kotlin When Statement.md",
-    "Kotlin/Kotlin object Keyword.md",
     "Swift"
   ]
 }

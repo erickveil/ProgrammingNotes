@@ -140,6 +140,10 @@ or
 
 To establish a connection to the WebSocket and handle incoming JSON messages in C++/Qt, you can use the `QWebSocket` class provided by the Qt WebSockets module. Below is a step-by-step guide on how to do this:
 
+### Install the WebSockets Module
+
+Use your package manager or the Qt Maintenance Tool and search for `websockets` on the Qt version you'll be building with. It doesn't come standard with Qt.
+
 ### Include Qt WebSockets Module
 
 Make sure you have the Qt WebSockets module installed. Add it to your `.pro` file:
