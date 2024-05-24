@@ -27,6 +27,3 @@ The tc program is part of the netem package.
 It is a default package on "most Linux default installs" (confirmed on Fedora and Ubuntu), so shouldn't need to be installed.
 
 As a bonus trick: If latency can't be simulated on either the sender or receiver, you can MITM the delay using an ssh pipe.
-
-
-
