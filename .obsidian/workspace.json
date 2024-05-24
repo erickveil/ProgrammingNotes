@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Websockets.md",
+                "file": "How To Simulate Network Latency.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Websockets.md",
+                "file": "How To Simulate Network Latency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Websockets.md",
+                "file": "How To Simulate Network Latency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Websockets.md"
+                "file": "How To Simulate Network Latency.md"
               }
             }
           }
@@ -173,8 +173,11 @@
   },
   "active": "05991998ba8f068c",
   "lastOpenFiles": [
-    "REST API on the Command Line and Qt.md",
     "Websockets.md",
+    "How To Simulate Network Latency.md",
+    "open 1.url",
+    "open.url",
+    "REST API on the Command Line and Qt.md",
     "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Qt",
     "HowToCollectPacketsOverTime.md",
@@ -200,7 +203,6 @@
     "Kotlin/Kotlin Lambdas.md",
     "Kotlin/Kotlin Coroutines.md",
     "Kotlin/Kotlin Architecture - Which One to Use.md",
-    "Kotlin/Kotlin When Statement.md",
     "Swift"
   ]
 }
