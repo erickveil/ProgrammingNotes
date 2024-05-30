@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "23cb5ba19d3e6468",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Qt/Formatted Output in Cpp and Qt.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Whitelist a User in SSH.md",
+                "file": "Qt/Formatted Output in Cpp and Qt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Whitelist a User in SSH.md",
+                "file": "Qt/Formatted Output in Cpp and Qt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Whitelist a User in SSH.md"
+                "file": "Qt/Formatted Output in Cpp and Qt.md"
               }
             }
           }
@@ -171,14 +183,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "05991998ba8f068c",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
-    "How To Simulate Network Latency.md",
+    "Untitled",
     "Whitelist a User in SSH.md",
+    "Qt/Formatted Output in Cpp and Qt.md",
+    "How To Simulate Network Latency.md",
     "Websockets.md",
     "open 1.url",
     "open.url",
-    "REST API on the Command Line and Qt.md",
+    "Qt/REST API on the Command Line and Qt.md",
     "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Qt",
     "HowToCollectPacketsOverTime.md",
@@ -201,8 +215,6 @@
     "Kotlin/MVC Project Development.md",
     "Kotlin/Dependency Injection and Hilt.md",
     "Kotlin/MVI Jetpack Project Development.md",
-    "Kotlin/Kotlin Lambdas.md",
-    "Kotlin/Kotlin Coroutines.md",
     "Swift"
   ]
 }
