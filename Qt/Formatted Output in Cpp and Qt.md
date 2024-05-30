@@ -67,3 +67,4 @@ int main(int argc, char *argv[]) {
 3. **`qPrintable()`**: Converts a `QString` to `const char*` which is printed as-is.
 
 By using `noquote()` along with either `QStringLiteral` or `qPrintable`, you can ensure that newline characters and other special characters in your JSON or text are printed correctly, making it more readable in the log output.
+
