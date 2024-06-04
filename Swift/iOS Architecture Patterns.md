@@ -66,3 +66,4 @@ Choosing the right architectural pattern for your iOS app depends on the complex
 - **SwiftUI and Combine:** Excellent for modern iOS apps using declarative UI and data binding.
 
 Consider these factors in the context of your specific project to make an informed decision on which architectural pattern to use.
+
