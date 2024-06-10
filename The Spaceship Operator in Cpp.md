@@ -5,7 +5,7 @@ tags:
   - Cpp
   - operator
 ---
-The spaceship operator (`<=>`) in C++20, also known as the three-way comparison operator, is a new feature introduced to simplify and standardize comparisons. It is used to perform a three-way comparison between two values, returning a value that indicates whether one value is less than, equal to, or greater than the other.
+The spaceship operator (`<=>`) in C++20, also known as the three-way comparison operator, is a  feature introduced to simplify and standardize comparisons. It is used to perform a three-way comparison between two values, returning a value that indicates whether one value is less than, equal to, or greater than the other.
 
 Here's a detailed explanation:
 

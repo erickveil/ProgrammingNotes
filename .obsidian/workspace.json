@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The Spaceship Operator in Cpp.md",
+                "file": "Qt/Honoring Newline Characters in qDebug.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "The Spaceship Operator in Cpp.md",
+                "file": "Qt/Honoring Newline Characters in qDebug.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "The Spaceship Operator in Cpp.md",
+                "file": "Qt/Honoring Newline Characters in qDebug.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "The Spaceship Operator in Cpp.md"
+                "file": "Qt/Honoring Newline Characters in qDebug.md"
               }
             }
           }
@@ -161,8 +161,9 @@
   },
   "active": "17463148746d7dc5",
   "lastOpenFiles": [
-    "Websockets.md",
     "The Spaceship Operator in Cpp.md",
+    "Qt/Honoring Newline Characters in qDebug.md",
+    "Websockets.md",
     "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Whitelist a User in SSH.md",
     "Swift/iOS Architecture Patterns.md",
@@ -191,7 +192,6 @@
     "Kotlin/Kotlin Automated Testing.md",
     "README.md~",
     "Kotlin/Kotlin Unit Testing With Jetpack and Espresso.md",
-    "Kotlin/Providing Context to ViewModels in Kotlin.md",
     "Swift"
   ]
 }
