@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "17463148746d7dc5",
+            "id": "5acb375c1c586e19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Qt/Honoring Newline Characters in qDebug.md",
+                "file": "Obtain IP Address on MacOS.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Qt/Honoring Newline Characters in qDebug.md",
+                "file": "Obtain IP Address on MacOS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Qt/Honoring Newline Characters in qDebug.md",
+                "file": "Obtain IP Address on MacOS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Qt/Honoring Newline Characters in qDebug.md"
+                "file": "Obtain IP Address on MacOS.md"
               }
             }
           }
@@ -159,11 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "17463148746d7dc5",
+  "active": "5acb375c1c586e19",
   "lastOpenFiles": [
+    "Websockets.md",
+    "Obtain IP Address on MacOS.md",
     "The Spaceship Operator in Cpp.md",
     "Qt/Honoring Newline Characters in qDebug.md",
-    "Websockets.md",
     "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Whitelist a User in SSH.md",
     "Swift/iOS Architecture Patterns.md",
@@ -191,7 +192,6 @@
     "Kotlin/Kotlin REST API.md",
     "Kotlin/Kotlin Automated Testing.md",
     "README.md~",
-    "Kotlin/Kotlin Unit Testing With Jetpack and Espresso.md",
     "Swift"
   ]
 }
