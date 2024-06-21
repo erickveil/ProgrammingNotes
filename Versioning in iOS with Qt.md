@@ -117,5 +117,86 @@ Maintain a `CHANGELOG.md` to document changes in each release.
 - Bug ABC
 ```
 
-### Submission to App Store
-Ensure that your version number and build number are correctly set before submitting your app to the App Store. The App Store requires a unique build number for each submission.
+
+# App Store Submissions
+
+For the App Store to identify a new `*.ipa` file as distinct from one that's already been uploaded, you need to change the **CFBundleVersion** value in your `Info.plist` file. This value is known as the build number and must be incremented with each submission to the App Store, even if the version number (CFBundleShortVersionString) remains the same.
+
+### Key Values in `Info.plist`
+
+1. **CFBundleShortVersionString**: This is the version number of your app that users see. It's typically in the format `MAJOR.MINOR.PATCH` (e.g., `1.2.0`).
+
+2. **CFBundleVersion**: This is the build number. It is an internal version number that must be unique for every App Store submission. It can be any string, but it is usually a monotonically increasing number (e.g., `123`, `124`, `125`, etc.).
+
+### Example of Updating `Info.plist`
+
+```xml
+<key>CFBundleShortVersionString</key>
+<string>1.2.0</string>
+<key>CFBundleVersion</key>
+<string>126</string>
+```
+
+### Steps to Increment the Build Number
+
+1. **Open `Info.plist`**: Locate your `Info.plist` file in your project.
+
+2. **Edit `CFBundleVersion`**: Increment the value of `CFBundleVersion` to a new unique number.
+
+3. **Rebuild Your App**: Rebuild your app to generate a new `*.ipa` file with the updated build number.
+
+### Automating Build Number Increment
+
+You can automate the incrementing of the build number using a script. Here’s an example of a simple shell script to increment the build number in `Info.plist`.
+
+```sh
+#!/bin/bash
+
+# Path to Info.plist
+plistPath="path/to/your/Info.plist"
+
+# Get the current build number
+currentBuildNumber=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$plistPath")
+
+# Increment the build number
+newBuildNumber=$((currentBuildNumber + 1))
+
+# Set the new build number
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $newBuildNumber" "$plistPath"
+
+echo "Updated build number to $newBuildNumber"
+```
+
+You can run this script before each build to ensure the build number is incremented automatically.
+
+### Continuous Integration
+
+In a CI/CD pipeline (e.g., GitHub Actions, Jenkins, etc.), you can integrate this script to run automatically, ensuring that each build has a unique build number.
+
+**Example GitHub Actions Workflow:**
+
+```yaml
+name: iOS Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+
+      - name: Increment build number
+        run: ./scripts/increment_build_number.sh
+
+      - name: Build and archive
+        run: xcodebuild -workspace YourApp.xcworkspace -scheme YourApp -sdk iphoneos -configuration Release archive -archivePath ${{ github.workspace }}/build/YourApp.xcarchive
+```
