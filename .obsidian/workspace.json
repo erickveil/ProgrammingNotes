@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Versioning in iOS with Qt.md",
+                "file": "Swift/Versioning in iOS with Qt.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Versioning in iOS with Qt.md",
+                "file": "Swift/Versioning in iOS with Qt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Versioning in iOS with Qt.md",
+                "file": "Swift/Versioning in iOS with Qt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Versioning in iOS with Qt.md"
+                "file": "Swift/Versioning in iOS with Qt.md"
               }
             }
           }
@@ -171,10 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "59e52fde514918d2",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
+    "GitHub Actions.md",
+    "Swift/Versioning in iOS with Qt.md",
     "How to Multithread in C++ Using Qt.md",
-    "Versioning in iOS with Qt.md",
     "Swift/iOS Architecture Patterns.md",
     "Obtain IP Address on MacOS.md",
     "Websockets.md",
@@ -196,7 +197,6 @@
     "How to Install a new Cygwin package without reinstalling the entire program.md",
     "How to get an ssh server on Windows with Cygwin.md",
     "C-Sharp Programming on Linux.md",
-    "GitHub Actions.md",
     "Kotlin/Kotlin Jetpack Navigation.md",
     "Kotlin/Navigating Activities and Fragments in Kotlin.md",
     "Swift/Swift Socket Client.md",
