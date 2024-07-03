@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Range Based Loops in Cpp 11.md",
+                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Range Based Loops in Cpp 11.md",
+                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Range Based Loops in Cpp 11.md",
+                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Range Based Loops in Cpp 11.md"
+                "file": "Converting Qt5 to Qt6 - Signals and Slots.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "c274acd327fedbed",
   "lastOpenFiles": [
+    "Converting Qt5 to Qt6 - Signals and Slots.md",
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
@@ -177,7 +178,6 @@
     "Kotlin/Navigating Activities and Fragments in Kotlin.md",
     "Swift/Swift Socket Client.md",
     "Swift/Swift Reading and Writing Files.md",
-    "Swift/Swift UI.md",
     "README.md~",
     "Swift"
   ]
