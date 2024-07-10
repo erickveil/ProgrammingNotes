@@ -1,3 +1,14 @@
+---
+title: How to Design MVI in Android
+layout: note
+tags:
+  - android
+  - architecture
+  - kotlin
+  - jetpack
+---
+I know I posted an in depth series of blog posts about this, but it's so long that it's a bit hard to follow. I think I've been able to simplify the concept better here:
+
 
 
 Here is a simplified breakdown of the MVI architecture. 
