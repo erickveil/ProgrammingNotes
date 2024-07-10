@@ -146,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36a8a740cb51cbe0",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
     "Converting Qt5 to Qt6 - Signals and Slots.md",
@@ -154,7 +154,7 @@
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
-    "Swift/Versioning in iOS with Qt.md",
+    "Qt/Versioning in iOS with Qt.md",
     "GitHub Actions.md",
     "Swift/iOS Architecture Patterns.md",
     "Obtain IP Address on MacOS.md",
