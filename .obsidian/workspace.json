@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c274acd327fedbed",
+            "id": "36a8a740cb51cbe0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "MVI Consolidated.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "MVI Consolidated.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "MVI Consolidated.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Converting Qt5 to Qt6 - Signals and Slots.md"
+                "file": "MVI Consolidated.md"
               }
             }
           }
@@ -146,9 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c274acd327fedbed",
+  "active": "36a8a740cb51cbe0",
   "lastOpenFiles": [
+    "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
     "Converting Qt5 to Qt6 - Signals and Slots.md",
+    "MVI Consolidated.md",
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
@@ -176,8 +178,6 @@
     "C-Sharp Programming on Linux.md",
     "Kotlin/Kotlin Jetpack Navigation.md",
     "Kotlin/Navigating Activities and Fragments in Kotlin.md",
-    "Swift/Swift Socket Client.md",
-    "Swift/Swift Reading and Writing Files.md",
     "README.md~",
     "Swift"
   ]
