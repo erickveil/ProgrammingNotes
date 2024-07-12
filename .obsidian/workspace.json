@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "766ca542fb039bcc",
+        "id": "1d9dfb75b7c2cba2",
         "type": "tabs",
         "children": [
           {
-            "id": "36a8a740cb51cbe0",
+            "id": "9c27e4bbef9b5235",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "How To Verify the SDK Level Your APK Targets.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "How To Verify the SDK Level Your APK Targets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
+                "file": "How To Verify the SDK Level Your APK Targets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Qt/Converting Qt5 to Qt6 - Signals and Slots.md"
+                "file": "How To Verify the SDK Level Your APK Targets.md"
               }
             }
           }
@@ -146,11 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fac82b7206f6165",
+  "active": "9c27e4bbef9b5235",
   "lastOpenFiles": [
+    "How To Verify the SDK Level Your APK Targets.md",
+    "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
     "MVI Consolidated.md",
-    "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
-    "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
