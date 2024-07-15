@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Consolidated.md",
+                "file": "How to Change the Icon On an NSIS Installer Script.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MVI Consolidated.md",
+                "file": "How to Change the Icon On an NSIS Installer Script.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MVI Consolidated.md",
+                "file": "How to Change the Icon On an NSIS Installer Script.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MVI Consolidated.md"
+                "file": "How to Change the Icon On an NSIS Installer Script.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "9c27e4bbef9b5235",
   "lastOpenFiles": [
+    "How to Change the Icon On an NSIS Installer Script.md",
     "Kotlin/MVI Jetpack Project Development.md",
     "How To Verify the SDK Level Your APK Targets.md",
     "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
@@ -177,7 +178,6 @@
     "How to Install a new Cygwin package without reinstalling the entire program.md",
     "How to get an ssh server on Windows with Cygwin.md",
     "C-Sharp Programming on Linux.md",
-    "Kotlin/Kotlin Jetpack Navigation.md",
     "README.md~",
     "Swift"
   ]
