@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to Play a Sound Clip in QML.md",
+                "file": "Qt/How to Play a Sound Clip in QML.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Play a Sound Clip in QML.md",
+                "file": "Qt/How to Play a Sound Clip in QML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Play a Sound Clip in QML.md",
+                "file": "Qt/How to Play a Sound Clip in QML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Play a Sound Clip in QML.md"
+                "file": "Qt/How to Play a Sound Clip in QML.md"
               }
             }
           }
@@ -171,10 +171,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d70bfb7cc2397d14",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Swift/iOS Architecture Patterns.md",
-    "How to Play a Sound Clip in QML.md",
+    "Qt/How to Play a Sound Clip in QML.md",
     "How to Make a Gitignore Whitelist.md",
     "How to Change the Icon On an NSIS Installer Script.md",
     "Kotlin/MVI Jetpack Project Development.md",
