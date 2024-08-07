@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kotlin `by` Keyword.md",
+                "file": "Kotlin/Kotlin `by` Keyword.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin `by` Keyword.md",
+                "file": "Kotlin/Kotlin `by` Keyword.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin `by` Keyword.md",
+                "file": "Kotlin/Kotlin `by` Keyword.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kotlin `by` Keyword.md"
+                "file": "Kotlin/Kotlin `by` Keyword.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3698186218df9ef5",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Android Build Script.md",
-    "Kotlin `by` Keyword.md",
+    "Kotlin/Kotlin `by` Keyword.md",
     "How to Change the Icon On an NSIS Installer Script.md",
     "Swift/iOS Architecture Patterns.md",
     "Qt/How to Play a Sound Clip in QML.md",
