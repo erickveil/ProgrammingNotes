@@ -78,3 +78,127 @@ void AppController::fetchLocalIpAddress()
 }
 ```
 
+
+# Qt gives you `foreach`!
+
+The `foreach` construct is actually a macro provided by Qt for convenience. However, the standard C++ way to achieve the same functionality is using range-based for loops or iterators.
+
+### Using Qt's `foreach` Macro:
+Qt provides a `foreach` macro for iterating over containers, which is a convenient shorthand:
+
+```cpp
+#include <QDir>
+#include <QStringList>
+#include <QDebug>
+#include <QCoreApplication>
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    // Specify the resource path
+    QDir resourceDir(":/BarrowCrawlResources/_Sporedeep/portraits/");
+
+    // Check if the directory exists
+    if (!resourceDir.exists()) {
+        qDebug() << "Directory does not exist!";
+        return -1;
+    }
+
+    // Set the filter for JPG files
+    QStringList filters;
+    filters << "*.jpg";
+
+    // Get the list of JPG files
+    QStringList jpgFiles = resourceDir.entryList(filters, QDir::Files);
+
+    // Print the list of files using foreach
+    foreach (const QString &file, jpgFiles) {
+        qDebug() << file;
+    }
+
+    return a.exec();
+}
+```
+
+### Using Standard C++ Range-Based For Loop:
+The equivalent code using the standard C++11 range-based for loop is as follows:
+
+```cpp
+#include <QDir>
+#include <QStringList>
+#include <QDebug>
+#include <QCoreApplication>
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    // Specify the resource path
+    QDir resourceDir(":/BarrowCrawlResources/_Sporedeep/portraits/");
+
+    // Check if the directory exists
+    if (!resourceDir.exists()) {
+        qDebug() << "Directory does not exist!";
+        return -1;
+    }
+
+    // Set the filter for JPG files
+    QStringList filters;
+    filters << "*.jpg";
+
+    // Get the list of JPG files
+    QStringList jpgFiles = resourceDir.entryList(filters, QDir::Files);
+
+    // Print the list of files using range-based for loop
+    for (const QString &file : jpgFiles) {
+        qDebug() << file;
+    }
+
+    return a.exec();
+}
+```
+
+### Using Iterators:
+If you prefer using iterators, here's how you can do it:
+
+```cpp
+#include <QDir>
+#include <QStringList>
+#include <QDebug>
+#include <QCoreApplication>
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    // Specify the resource path
+    QDir resourceDir(":/BarrowCrawlResources/_Sporedeep/portraits/");
+
+    // Check if the directory exists
+    if (!resourceDir.exists()) {
+        qDebug() << "Directory does not exist!";
+        return -1;
+    }
+
+    // Set the filter for JPG files
+    QStringList filters;
+    filters << "*.jpg";
+
+    // Get the list of JPG files
+    QStringList jpgFiles = resourceDir.entryList(filters, QDir::Files);
+
+    // Print the list of files using iterators
+    for (QStringList::const_iterator it = jpgFiles.begin(); it != jpgFiles.end(); ++it) {
+        qDebug() << *it;
+    }
+
+    return a.exec();
+}
+```
+
+- **Qt `foreach` Macro**: Provides a convenient way to iterate over Qt containers.
+- **Range-Based For Loop**: Standard C++11 feature for iterating over containers.
+- **Iterators**: Traditional method for iterating over containers, available in all versions of C++. 
+
+All these methods achieve the same result, and you can choose the one that best fits your coding style or project requirements.
