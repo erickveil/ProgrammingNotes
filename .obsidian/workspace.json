@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "8d611358df249498",
+            "id": "525ab6991e1e89b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/Cpp Int to Enum.md",
+                "file": "How to Gate Code to Compile on Specific Platforms.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/Cpp Int to Enum.md",
+                "file": "How to Gate Code to Compile on Specific Platforms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++/Cpp Int to Enum.md",
+                "file": "How to Gate Code to Compile on Specific Platforms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/Cpp Int to Enum.md"
+                "file": "How to Gate Code to Compile on Specific Platforms.md"
               }
             }
           }
@@ -159,13 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fac82b7206f6165",
+  "active": "525ab6991e1e89b3",
   "lastOpenFiles": [
+    "Android Build Script.md",
+    "How to Gate Code to Compile on Specific Platforms.md",
     "Untitled.md",
     "C++/Range Based Loops in Cpp 11.md",
     "Kotlin/Kotlin Lambdas.md",
     "C++/Cpp Int to Enum.md",
-    "Android Build Script.md",
     "Kotlin/Kotlin `by` Keyword.md",
     "How to Change the Icon On an NSIS Installer Script.md",
     "Swift/iOS Architecture Patterns.md",
@@ -186,7 +187,6 @@
     "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "Whitelist a User in SSH.md",
     "HowToCollectPacketsOverTime.md",
-    "How to Use `nmap` to Scan for Open Ports.md",
     "open.url",
     "Untitled",
     "open 1.url",
