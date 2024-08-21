@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to Gate Code to Compile on Specific Platforms.md",
+                "file": "C++/How to Gate Code to Compile on Specific Platforms.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Gate Code to Compile on Specific Platforms.md",
+                "file": "C++/How to Gate Code to Compile on Specific Platforms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Gate Code to Compile on Specific Platforms.md",
+                "file": "C++/How to Gate Code to Compile on Specific Platforms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Gate Code to Compile on Specific Platforms.md"
+                "file": "C++/How to Gate Code to Compile on Specific Platforms.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "525ab6991e1e89b3",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Android Build Script.md",
-    "How to Gate Code to Compile on Specific Platforms.md",
+    "C++/How to Gate Code to Compile on Specific Platforms.md",
     "Untitled.md",
     "C++/Range Based Loops in Cpp 11.md",
     "Kotlin/Kotlin Lambdas.md",
