@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d95cfcf92ebf97ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Play a Sound Clip With QML.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excluding an Indexed Directory in Git.md",
+                "file": "How to Play a Sound Clip With QML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excluding an Indexed Directory in Git.md",
+                "file": "How to Play a Sound Clip With QML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excluding an Indexed Directory in Git.md"
+                "file": "How to Play a Sound Clip With QML.md"
               }
             }
           }
@@ -183,10 +195,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08da6fb52c078723",
+  "active": "d95cfcf92ebf97ba",
   "lastOpenFiles": [
-    "How to Set Persistent Settings in Qt.md",
     "Excluding an Indexed Directory in Git.md",
+    "How to Play a Sound Clip With QML.md",
+    "How to Set Persistent Settings in Qt.md",
     "Android Build Script.md",
     "C++/How to Gate Code to Compile on Specific Platforms.md",
     "Untitled.md",
@@ -210,7 +223,6 @@
     "Obtain IP Address on MacOS.md",
     "The Spaceship Operator in Cpp.md",
     "Qt/Honoring Newline Characters in qDebug.md",
-    "Qt/How to Set Up Qt Unit Tests For a Large Project.md",
     "open.url",
     "Untitled",
     "open 1.url",
