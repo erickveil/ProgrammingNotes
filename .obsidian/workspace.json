@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to Play a Sound Clip With QML.md",
+                "file": "Qt/How to Play a Sound Clip With QML.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Play a Sound Clip With QML.md",
+                "file": "Qt/How to Play a Sound Clip With QML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Play a Sound Clip With QML.md",
+                "file": "Qt/How to Play a Sound Clip With QML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Play a Sound Clip With QML.md"
+                "file": "Qt/How to Play a Sound Clip With QML.md"
               }
             }
           }
@@ -195,10 +195,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d95cfcf92ebf97ba",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Excluding an Indexed Directory in Git.md",
-    "How to Play a Sound Clip With QML.md",
+    "Qt/How to Play a Sound Clip With QML.md",
     "How to Set Persistent Settings in Qt.md",
     "Android Build Script.md",
     "C++/How to Gate Code to Compile on Specific Platforms.md",
