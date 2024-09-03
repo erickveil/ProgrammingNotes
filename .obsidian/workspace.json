@@ -66,9 +66,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ee4c77fed246f96d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Run Cpp Code from CSharp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -134,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Qt/How to Play a Sound Clip With QML.md",
+                "file": "How to Run Cpp Code from CSharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Qt/How to Play a Sound Clip With QML.md",
+                "file": "How to Run Cpp Code from CSharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Qt/How to Play a Sound Clip With QML.md"
+                "file": "How to Run Cpp Code from CSharp.md"
               }
             }
           }
@@ -197,10 +209,11 @@
   },
   "active": "1fac82b7206f6165",
   "lastOpenFiles": [
+    "Android Build Script.md",
+    "How to Run Cpp Code from CSharp.md",
     "Excluding an Indexed Directory in Git.md",
     "Qt/How to Play a Sound Clip With QML.md",
     "How to Set Persistent Settings in Qt.md",
-    "Android Build Script.md",
     "C++/How to Gate Code to Compile on Specific Platforms.md",
     "Untitled.md",
     "C++/Range Based Loops in Cpp 11.md",
@@ -222,7 +235,6 @@
     "GitHub Actions.md",
     "Obtain IP Address on MacOS.md",
     "The Spaceship Operator in Cpp.md",
-    "Qt/Honoring Newline Characters in qDebug.md",
     "open.url",
     "Untitled",
     "open 1.url",
