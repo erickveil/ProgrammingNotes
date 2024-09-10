@@ -102,9 +102,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "71ef0bb9d33d6549",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Handle Circular Dependencies in Cpp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -170,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Calculate the Exponential Decay Formula in Cpp.md",
+                "file": "How to Handle Circular Dependencies in Cpp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Calculate the Exponential Decay Formula in Cpp.md",
+                "file": "How to Handle Circular Dependencies in Cpp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Calculate the Exponential Decay Formula in Cpp.md"
+                "file": "How to Handle Circular Dependencies in Cpp.md"
               }
             }
           }
@@ -231,10 +243,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea84c001cb3cb489",
+  "active": "71ef0bb9d33d6549",
   "lastOpenFiles": [
-    "How to Properly Convert Int to Enum in Cpp.md",
     "How to Calculate the Exponential Decay Formula in Cpp.md",
+    "How to Handle Circular Dependencies in Cpp.md",
+    "How to Properly Convert Int to Enum in Cpp.md",
     "Android Build Script.md",
     "How to Run Cpp Code from CSharp.md",
     "Excluding an Indexed Directory in Git.md",
@@ -258,7 +271,6 @@
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
     "Qt/Versioning in iOS with Qt.md",
-    "GitHub Actions.md",
     "open.url",
     "Untitled",
     "open 1.url",
