@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to Handle Circular Dependencies in Cpp.md",
+                "file": "C++/How to Handle Circular Dependencies in Cpp.md",
                 "mode": "source",
                 "source": false
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Handle Circular Dependencies in Cpp.md",
+                "file": "C++/How to Handle Circular Dependencies in Cpp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Handle Circular Dependencies in Cpp.md",
+                "file": "C++/How to Handle Circular Dependencies in Cpp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Handle Circular Dependencies in Cpp.md"
+                "file": "C++/How to Handle Circular Dependencies in Cpp.md"
               }
             }
           }
@@ -243,10 +243,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "71ef0bb9d33d6549",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "How to Calculate the Exponential Decay Formula in Cpp.md",
-    "How to Handle Circular Dependencies in Cpp.md",
+    "C++/How to Handle Circular Dependencies in Cpp.md",
     "How to Properly Convert Int to Enum in Cpp.md",
     "Android Build Script.md",
     "How to Run Cpp Code from CSharp.md",
