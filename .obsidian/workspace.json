@@ -114,9 +114,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "db0a2d28f7d660a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Using Context in the ViewModel in Kotlin.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -182,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/How to Handle Circular Dependencies in Cpp.md",
+                "file": "Using Context in the ViewModel in Kotlin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +211,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++/How to Handle Circular Dependencies in Cpp.md",
+                "file": "Using Context in the ViewModel in Kotlin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,7 +234,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/How to Handle Circular Dependencies in Cpp.md"
+                "file": "Using Context in the ViewModel in Kotlin.md"
               }
             }
           }
@@ -243,12 +255,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fac82b7206f6165",
+  "active": "db0a2d28f7d660a9",
   "lastOpenFiles": [
+    "Android Build Script.md",
+    "Using Context in the ViewModel in Kotlin.md",
     "How to Calculate the Exponential Decay Formula in Cpp.md",
     "C++/How to Handle Circular Dependencies in Cpp.md",
     "How to Properly Convert Int to Enum in Cpp.md",
-    "Android Build Script.md",
     "How to Run Cpp Code from CSharp.md",
     "Excluding an Indexed Directory in Git.md",
     "Qt/How to Play a Sound Clip With QML.md",
@@ -270,7 +283,6 @@
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
     "How to Multithread in C++ Using Qt.md",
-    "Qt/Versioning in iOS with Qt.md",
     "open.url",
     "Untitled",
     "open 1.url",
