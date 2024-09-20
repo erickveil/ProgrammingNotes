@@ -121,7 +121,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Using Context in the ViewModel in Kotlin.md",
+                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md",
                 "mode": "source",
                 "source": false
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Using Context in the ViewModel in Kotlin.md",
+                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -211,7 +211,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Using Context in the ViewModel in Kotlin.md",
+                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -234,7 +234,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Using Context in the ViewModel in Kotlin.md"
+                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md"
               }
             }
           }
@@ -255,10 +255,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "db0a2d28f7d660a9",
+  "active": "1fac82b7206f6165",
   "lastOpenFiles": [
     "Android Build Script.md",
-    "Using Context in the ViewModel in Kotlin.md",
+    "Kotlin/Using Context in the ViewModel in Kotlin.md",
     "How to Calculate the Exponential Decay Formula in Cpp.md",
     "C++/How to Handle Circular Dependencies in Cpp.md",
     "How to Properly Convert Int to Enum in Cpp.md",
