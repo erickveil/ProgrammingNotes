@@ -126,9 +126,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ffc2e97f3dd2b83b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Cast Parent to Child in Cpp.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -157,7 +169,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "range based",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,7 +206,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md",
+                "file": "How to Cast Parent to Child in Cpp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -211,7 +223,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md",
+                "file": "How to Cast Parent to Child in Cpp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -234,7 +246,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kotlin/Using Context in the ViewModel in Kotlin.md"
+                "file": "How to Cast Parent to Child in Cpp.md"
               }
             }
           }
@@ -255,10 +267,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fac82b7206f6165",
+  "active": "ffc2e97f3dd2b83b",
   "lastOpenFiles": [
-    "Android Build Script.md",
     "Kotlin/Using Context in the ViewModel in Kotlin.md",
+    "How to Cast Parent to Child in Cpp.md",
+    "Android Build Script.md",
     "How to Calculate the Exponential Decay Formula in Cpp.md",
     "C++/How to Handle Circular Dependencies in Cpp.md",
     "How to Properly Convert Int to Enum in Cpp.md",
@@ -282,7 +295,6 @@
     "MVI Consolidated.md",
     "Range Based Loops in Cpp 11.md",
     "Websockets.md",
-    "How to Multithread in C++ Using Qt.md",
     "open.url",
     "Untitled",
     "open 1.url",
