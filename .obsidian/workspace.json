@@ -138,9 +138,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "063949999cd901dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Gate Code For OS in Cpp and Qt.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -206,7 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/How to Cast Parent to Child in Cpp.md",
+                "file": "How to Gate Code For OS in Cpp and Qt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +235,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++/How to Cast Parent to Child in Cpp.md",
+                "file": "How to Gate Code For OS in Cpp and Qt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -246,7 +258,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/How to Cast Parent to Child in Cpp.md"
+                "file": "How to Gate Code For OS in Cpp and Qt.md"
               }
             }
           }
@@ -267,11 +279,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fac82b7206f6165",
+  "active": "063949999cd901dc",
   "lastOpenFiles": [
-    "Kotlin/Using Context in the ViewModel in Kotlin.md",
     "C++/How to Cast Parent to Child in Cpp.md",
+    "How to Gate Code For OS in Cpp and Qt.md",
     "Android Build Script.md",
+    "Kotlin/Using Context in the ViewModel in Kotlin.md",
     "How to Calculate the Exponential Decay Formula in Cpp.md",
     "C++/How to Handle Circular Dependencies in Cpp.md",
     "How to Properly Convert Int to Enum in Cpp.md",
@@ -294,7 +307,6 @@
     "Qt/Converting Qt5 to Qt6 - Signals and Slots.md",
     "MVI Consolidated.md",
     "Range Based Loops in Cpp 11.md",
-    "Websockets.md",
     "open.url",
     "Untitled",
     "open 1.url",
