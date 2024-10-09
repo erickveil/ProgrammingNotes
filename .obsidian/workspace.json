@@ -18,8 +18,57 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fd2ef4ab3701092f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kotlin/Kotlin Jetpack Navigation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f369bbf06cb1455e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kotlin/MVI Jetpack Project Development.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "42a425bc5414f604",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Qt/How to Play a Sound Clip in QML.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc65a16d2a029e5f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Running Git Commands from Swift.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -48,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sound",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Maintainable Flutter.md",
+                "file": "Running Git Commands from Swift.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Maintainable Flutter.md",
+                "file": "Running Git Commands from Swift.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Maintainable Flutter.md"
+                "file": "Running Git Commands from Swift.md"
               }
             }
           }
@@ -146,11 +195,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "60c92e290cef7eb2",
+  "active": "cc65a16d2a029e5f",
   "lastOpenFiles": [
+    "Qt/How to Play a Sound Clip in QML.md",
+    "Running Git Commands from Swift.md",
+    "Untitled 1.md",
+    "Kotlin/MVI Jetpack Project Development.md",
+    "Maintainable Flutter.md",
+    "Kotlin/Kotlin Jetpack Navigation.md",
     "The Scapegoat.md",
     "When to Pass By Reference and When to Use a Pointer.md",
-    "Maintainable Flutter.md",
     "How to Gate Code For OS in Cpp and Qt.md",
     "C++/How to Cast Parent to Child in Cpp.md",
     "Android Build Script.md",
@@ -163,17 +217,12 @@
     "Qt/How to Play a Sound Clip With QML.md",
     "How to Set Persistent Settings in Qt.md",
     "C++/How to Gate Code to Compile on Specific Platforms.md",
-    "Untitled.md",
     "C++/Range Based Loops in Cpp 11.md",
     "Kotlin/Kotlin Lambdas.md",
     "C++/Cpp Int to Enum.md",
     "Kotlin/Kotlin `by` Keyword.md",
     "How to Change the Icon On an NSIS Installer Script.md",
     "Swift/iOS Architecture Patterns.md",
-    "Qt/How to Play a Sound Clip in QML.md",
-    "How to Make a Gitignore Whitelist.md",
-    "Kotlin/MVI Jetpack Project Development.md",
-    "How To Verify the SDK Level Your APK Targets.md",
     "open.url",
     "Untitled",
     "open 1.url",
