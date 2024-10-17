@@ -16,7 +16,9 @@
                 "file": "Maintainable Flutter.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Maintainable Flutter"
             }
           },
           {
@@ -28,7 +30,9 @@
                 "file": "Kotlin/Kotlin Jetpack Navigation.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Kotlin Jetpack Navigation"
             }
           },
           {
@@ -40,7 +44,9 @@
                 "file": "Kotlin/MVI Jetpack Project Development.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "MVI Jetpack Project Development"
             }
           },
           {
@@ -52,7 +58,9 @@
                 "file": "Qt/How to Play a Sound Clip in QML.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "How to Play a Sound Clip in QML"
             }
           },
           {
@@ -64,7 +72,9 @@
                 "file": "Running Git Commands from Swift.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Running Git Commands from Swift"
             }
           },
           {
@@ -76,11 +86,27 @@
                 "file": "How to Make App Generated Files Accessible In iOS.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "How to Make App Generated Files Accessible In iOS"
+            }
+          },
+          {
+            "id": "5d3b0823aebea3db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Flutter Architectures.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Flutter Architectures"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -100,7 +126,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -115,7 +143,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -123,7 +153,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -146,7 +178,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to Make App Generated Files Accessible In iOS.md",
+                "file": "Flutter Architectures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +186,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Flutter Architectures"
             }
           },
           {
@@ -163,10 +197,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to Make App Generated Files Accessible In iOS.md",
+                "file": "Flutter Architectures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Flutter Architectures"
             }
           },
           {
@@ -177,7 +213,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -186,8 +224,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to Make App Generated Files Accessible In iOS.md"
-              }
+                "file": "Flutter Architectures.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Flutter Architectures"
             }
           }
         ]
@@ -207,10 +247,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fad21229c0906ea3",
+  "active": "5d3b0823aebea3db",
   "lastOpenFiles": [
-    "Running Git Commands from Swift.md",
     "How to Make App Generated Files Accessible In iOS.md",
+    "Flutter Architectures.md",
+    "Running Git Commands from Swift.md",
     "Qt/How to Play a Sound Clip in QML.md",
     "Untitled 1.md",
     "Kotlin/MVI Jetpack Project Development.md",
@@ -234,7 +275,6 @@
     "Kotlin/Kotlin Lambdas.md",
     "C++/Cpp Int to Enum.md",
     "Kotlin/Kotlin `by` Keyword.md",
-    "How to Change the Icon On an NSIS Installer Script.md",
     "open.url",
     "Untitled",
     "open 1.url",
