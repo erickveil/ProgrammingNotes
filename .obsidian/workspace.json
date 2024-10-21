@@ -104,9 +104,23 @@
               "icon": "lucide-file",
               "title": "Flutter Architectures"
             }
+          },
+          {
+            "id": "029761bf79c9520d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Set a Static IP on Raspberry Pi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "How to Set a Static IP on Raspberry Pi"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -247,10 +261,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d3b0823aebea3db",
+  "active": "029761bf79c9520d",
   "lastOpenFiles": [
-    "How to Make App Generated Files Accessible In iOS.md",
     "Flutter Architectures.md",
+    "How to Set a Static IP on Raspberry Pi.md",
+    "How to Make App Generated Files Accessible In iOS.md",
     "Running Git Commands from Swift.md",
     "Qt/How to Play a Sound Clip in QML.md",
     "Untitled 1.md",
@@ -274,7 +289,6 @@
     "C++/Range Based Loops in Cpp 11.md",
     "Kotlin/Kotlin Lambdas.md",
     "C++/Cpp Int to Enum.md",
-    "Kotlin/Kotlin `by` Keyword.md",
     "open.url",
     "Untitled",
     "open 1.url",
