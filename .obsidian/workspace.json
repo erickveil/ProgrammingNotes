@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "How to Pass Data From Controller to View in am MVC Project"
             }
+          },
+          {
+            "id": "1554293c604ef24f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How to Parse Subcommands and Args With Qt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "How to Parse Subcommands and Args With Qt"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -69,7 +83,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -191,11 +206,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1b963a82aa22a8f8",
+  "active": "1554293c604ef24f",
   "lastOpenFiles": [
-    "How to Add MVC Database to your Blazor Application.md",
-    "How to Pass Data From Controller to View in am MVC Project.md",
     "How Root Routing Works In Blazor.md",
+    "How to Parse Subcommands and Args With Qt.md",
+    "How to Pass Data From Controller to View in am MVC Project.md",
+    "How to Add MVC Database to your Blazor Application.md",
     "Misc/Whitelist a User in SSH.md",
     "C++/When to Pass By Reference and When to Use a Pointer.md",
     "Misc/Websockets.md",
@@ -220,7 +236,6 @@
     "Qt/How to Gate Code For OS in Cpp and Qt.md",
     "Misc/How to Change the Icon On an NSIS Installer Script.md",
     "Misc",
-    "Math/How to Calculate the Exponential Decay Formula in Cpp.md",
     "Math",
     "Flutter",
     "git",
