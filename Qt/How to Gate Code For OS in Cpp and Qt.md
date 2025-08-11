@@ -75,7 +75,17 @@ This documentation provides a complete list of all the global macros defined by 
 
 # QML
 
-In QML, you can use the `Qt.platform.os` property to determine the platform at runtime and conditionally include sections of your QML code. For marking a section of code to be executed only on Android, you can use a `Loader` or similar conditional statements to load components based on the platform.
+In QML, you can use the `Qt.platform.os` property to determine the platform at runtime and conditionally include sections of your QML code. 
+
+The best thing to do is conditionally set the visibility of the QML Item:
+
+```qml
+visible: (Qt.platform.os === "osx" || Qt.platform.os === "windows")
+```
+
+
+## Only Load QML on Platform
+For marking a section of code to be executed only on Android, you can use a `Loader` or similar conditional statements to load components based on the platform.
 
 Here's an example of how you can conditionally include QML code for Android only:
 
@@ -151,3 +161,6 @@ ApplicationWindow {
 In this setup, the `androidComponent` is defined inline within the `Loader`'s `sourceComponent` condition. This ensures that the component is only instantiated if the platform condition (`Qt.platform.os === "android"`) is met. Otherwise, the component remains uninitialized.
 
 By using this approach, you can avoid any unnecessary initialization of components that are not needed for the current platform.
+
+Here is a link to the other platform strings you can use:
+https://doc.qt.io/qt-6/qml-qtqml-qt.html#platform-prop
