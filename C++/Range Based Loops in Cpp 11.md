@@ -6,7 +6,7 @@ tags:
   - loops
 ---
 
-I came accross this the other day.
+I came across this the other day.
 Take a look at the loop structure in the following code:
 
 ```cpp
@@ -120,6 +120,11 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 ```
+
+#### Don't Use `foreach` With `QJsonArray`
+It's important to note that `foreach` will copy the container, while the range-based loop will not. In the case of `QJsonArray`, the use of `foreach` is deprecated. There's a risk that you'll be looping through the JSON and making changes to it, and in this case you'd be making changes to the copy, and not your actual JSON structure.
+
+As of this writing, you'll get a compiler warning for this.
 
 ### Using Standard C++ Range-Based For Loop:
 The equivalent code using the standard C++11 range-based for loop is as follows:
