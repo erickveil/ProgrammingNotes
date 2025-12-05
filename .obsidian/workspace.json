@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flutter/How to Build an Android AAB From a Flutter Project.md",
+                "file": "Flutter/How to Create a New Flutter Project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to Build an Android AAB From a Flutter Project"
+              "title": "How to Create a New Flutter Project"
             }
           }
         ],
@@ -223,11 +223,12 @@
   },
   "active": "74700c4d82db5078",
   "lastOpenFiles": [
-    "How to Build a Standalone Windows App with Flutter.md",
-    "Flutter/How to Build an Android AAB From a Flutter Project.md",
-    "How Root Routing Works In Blazor.md",
-    "Flutter/Maintainable Flutter.md",
     "Flutter/Flutter Architectures.md",
+    "Flutter/How to Create a New Flutter Project.md",
+    "Flutter/How to Build an Android AAB From a Flutter Project.md",
+    "Flutter/Maintainable Flutter.md",
+    "How to Build a Standalone Windows App with Flutter.md",
+    "How Root Routing Works In Blazor.md",
     "C++/Range Based Loops in Cpp 11.md",
     "How to Set the Team in an iOS Qt Project.md",
     "How to Parse Subcommands and Args With Qt.md",
@@ -249,7 +250,6 @@
     "Misc/How to Set a Static IP on Raspberry Pi.md",
     "C#/How to Run Cpp Code from CSharp.md",
     "C++/How to Properly Convert Int to Enum in Cpp.md",
-    "Swift/How to Make App Generated Files Accessible In iOS.md",
     "Misc",
     "Math",
     "Flutter",
